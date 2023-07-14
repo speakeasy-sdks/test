@@ -227,7 +227,6 @@ Multiple status values can be provided with comma separated strings
 ```typescript
 import { Test } from "Test";
 import { FindPetsByStatusResponse, FindPetsByStatusStatus } from "Test/dist/sdk/models/operations";
-import { PetStatus } from "Test/dist/sdk/models/shared";
 
 const sdk = new Test();
 
@@ -265,7 +264,6 @@ Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3
 ```typescript
 import { Test } from "Test";
 import { FindPetsByTagsResponse } from "Test/dist/sdk/models/operations";
-import { PetStatus } from "Test/dist/sdk/models/shared";
 
 const sdk = new Test();
 
@@ -307,7 +305,6 @@ Returns a single pet
 ```typescript
 import { Test } from "Test";
 import { GetPetByIdResponse } from "Test/dist/sdk/models/operations";
-import { PetStatus } from "Test/dist/sdk/models/shared";
 
 const sdk = new Test();
 

@@ -92,7 +92,6 @@ For valid response try integer IDs with value <= 5 or > 10. Other values will ge
 ```typescript
 import { Test } from "Test";
 import { GetOrderByIdResponse } from "Test/dist/sdk/models/operations";
-import { OrderStatus } from "Test/dist/sdk/models/shared";
 
 const sdk = new Test();
 
