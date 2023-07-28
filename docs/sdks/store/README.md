@@ -57,13 +57,14 @@ Returns a map of status codes to quantities
 
 ```typescript
 import { Test } from "Test";
-import { GetInventoryResponse } from "Test/dist/sdk/models/operations";
+import { GetInventoryResponse, GetInventorySecurity } from "Test/dist/sdk/models/operations";
 
 const sdk = new Test();
-
-sdk.store.getInventory({
+const operationSecurity: GetInventorySecurity = {
   apiKey: "",
-}).then((res: GetInventoryResponse) => {
+};
+
+sdk.store.getInventory(operationSecurity).then((res: GetInventoryResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

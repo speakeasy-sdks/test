@@ -29,10 +29,13 @@ Add a new pet to the store
 
 ```typescript
 import { Test } from "Test";
-import { AddPetFormResponse } from "Test/dist/sdk/models/operations";
+import { AddPetFormResponse, AddPetFormSecurity } from "Test/dist/sdk/models/operations";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
 const sdk = new Test();
+const operationSecurity: AddPetFormSecurity = {
+  petstoreAuth: "",
+};
 
 sdk.pet.addPetForm({
   category: {
@@ -63,9 +66,7 @@ sdk.pet.addPetForm({
       name: "Everett Breitenberg",
     },
   ],
-}, {
-  petstoreAuth: "",
-}).then((res: AddPetFormResponse) => {
+}, operationSecurity).then((res: AddPetFormResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -94,10 +95,13 @@ Add a new pet to the store
 
 ```typescript
 import { Test } from "Test";
-import { AddPetJsonResponse } from "Test/dist/sdk/models/operations";
+import { AddPetJsonResponse, AddPetJsonSecurity } from "Test/dist/sdk/models/operations";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
 const sdk = new Test();
+const operationSecurity: AddPetJsonSecurity = {
+  petstoreAuth: "",
+};
 
 sdk.pet.addPetJson({
   category: {
@@ -121,9 +125,7 @@ sdk.pet.addPetJson({
       name: "Curtis Morissette",
     },
   ],
-}, {
-  petstoreAuth: "",
-}).then((res: AddPetJsonResponse) => {
+}, operationSecurity).then((res: AddPetJsonResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -152,14 +154,15 @@ Add a new pet to the store
 
 ```typescript
 import { Test } from "Test";
-import { AddPetRawResponse } from "Test/dist/sdk/models/operations";
+import { AddPetRawResponse, AddPetRawSecurity } from "Test/dist/sdk/models/operations";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
 const sdk = new Test();
-
-sdk.pet.addPetRaw("saepe".encode(), {
+const operationSecurity: AddPetRawSecurity = {
   petstoreAuth: "",
-}).then((res: AddPetRawResponse) => {
+};
+
+sdk.pet.addPetRaw("saepe".encode(), operationSecurity).then((res: AddPetRawResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -188,16 +191,17 @@ Deletes a pet
 
 ```typescript
 import { Test } from "Test";
-import { DeletePetResponse } from "Test/dist/sdk/models/operations";
+import { DeletePetResponse, DeletePetSecurity } from "Test/dist/sdk/models/operations";
 
 const sdk = new Test();
+const operationSecurity: DeletePetSecurity = {
+  petstoreAuth: "",
+};
 
 sdk.pet.deletePet({
   apiKey: "fuga",
   petId: 449950,
-}, {
-  petstoreAuth: "",
-}).then((res: DeletePetResponse) => {
+}, operationSecurity).then((res: DeletePetResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -226,15 +230,16 @@ Multiple status values can be provided with comma separated strings
 
 ```typescript
 import { Test } from "Test";
-import { FindPetsByStatusResponse, FindPetsByStatusStatus } from "Test/dist/sdk/models/operations";
+import { FindPetsByStatusResponse, FindPetsByStatusSecurity, FindPetsByStatusStatus } from "Test/dist/sdk/models/operations";
 
 const sdk = new Test();
+const operationSecurity: FindPetsByStatusSecurity = {
+  petstoreAuth: "",
+};
 
 sdk.pet.findPetsByStatus({
   status: FindPetsByStatusStatus.Pending,
-}, {
-  petstoreAuth: "",
-}).then((res: FindPetsByStatusResponse) => {
+}, operationSecurity).then((res: FindPetsByStatusResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -263,9 +268,12 @@ Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3
 
 ```typescript
 import { Test } from "Test";
-import { FindPetsByTagsResponse } from "Test/dist/sdk/models/operations";
+import { FindPetsByTagsResponse, FindPetsByTagsSecurity } from "Test/dist/sdk/models/operations";
 
 const sdk = new Test();
+const operationSecurity: FindPetsByTagsSecurity = {
+  petstoreAuth: "",
+};
 
 sdk.pet.findPetsByTags({
   tags: [
@@ -273,9 +281,7 @@ sdk.pet.findPetsByTags({
     "saepe",
     "quidem",
   ],
-}, {
-  petstoreAuth: "",
-}).then((res: FindPetsByTagsResponse) => {
+}, operationSecurity).then((res: FindPetsByTagsResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -304,15 +310,16 @@ Returns a single pet
 
 ```typescript
 import { Test } from "Test";
-import { GetPetByIdResponse } from "Test/dist/sdk/models/operations";
+import { GetPetByIdResponse, GetPetByIdSecurity } from "Test/dist/sdk/models/operations";
 
 const sdk = new Test();
+const operationSecurity: GetPetByIdSecurity = {
+  apiKey: "",
+};
 
 sdk.pet.getPetById({
   petId: 99280,
-}, {
-  apiKey: "",
-}).then((res: GetPetByIdResponse) => {
+}, operationSecurity).then((res: GetPetByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -341,17 +348,18 @@ Updates a pet in the store with form data
 
 ```typescript
 import { Test } from "Test";
-import { UpdatePetWithFormResponse } from "Test/dist/sdk/models/operations";
+import { UpdatePetWithFormResponse, UpdatePetWithFormSecurity } from "Test/dist/sdk/models/operations";
 
 const sdk = new Test();
+const operationSecurity: UpdatePetWithFormSecurity = {
+  petstoreAuth: "",
+};
 
 sdk.pet.updatePetWithForm({
   name: "Lela Orn",
   petId: 170909,
   status: "dolorem",
-}, {
-  petstoreAuth: "",
-}).then((res: UpdatePetWithFormResponse) => {
+}, operationSecurity).then((res: UpdatePetWithFormResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -380,10 +388,13 @@ Update an existing pet by Id
 
 ```typescript
 import { Test } from "Test";
-import { UpdatePetFormResponse } from "Test/dist/sdk/models/operations";
+import { UpdatePetFormResponse, UpdatePetFormSecurity } from "Test/dist/sdk/models/operations";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
 const sdk = new Test();
+const operationSecurity: UpdatePetFormSecurity = {
+  petstoreAuth: "",
+};
 
 sdk.pet.updatePetForm({
   category: {
@@ -411,9 +422,7 @@ sdk.pet.updatePetForm({
       name: "Shaun McCullough",
     },
   ],
-}, {
-  petstoreAuth: "",
-}).then((res: UpdatePetFormResponse) => {
+}, operationSecurity).then((res: UpdatePetFormResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -442,10 +451,13 @@ Update an existing pet by Id
 
 ```typescript
 import { Test } from "Test";
-import { UpdatePetJsonResponse } from "Test/dist/sdk/models/operations";
+import { UpdatePetJsonResponse, UpdatePetJsonSecurity } from "Test/dist/sdk/models/operations";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
 const sdk = new Test();
+const operationSecurity: UpdatePetJsonSecurity = {
+  petstoreAuth: "",
+};
 
 sdk.pet.updatePetJson({
   category: {
@@ -465,9 +477,7 @@ sdk.pet.updatePetJson({
       name: "Kayla O'Kon",
     },
   ],
-}, {
-  petstoreAuth: "",
-}).then((res: UpdatePetJsonResponse) => {
+}, operationSecurity).then((res: UpdatePetJsonResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -496,14 +506,15 @@ Update an existing pet by Id
 
 ```typescript
 import { Test } from "Test";
-import { UpdatePetRawResponse } from "Test/dist/sdk/models/operations";
+import { UpdatePetRawResponse, UpdatePetRawSecurity } from "Test/dist/sdk/models/operations";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
 const sdk = new Test();
-
-sdk.pet.updatePetRaw("quo".encode(), {
+const operationSecurity: UpdatePetRawSecurity = {
   petstoreAuth: "",
-}).then((res: UpdatePetRawResponse) => {
+};
+
+sdk.pet.updatePetRaw("quo".encode(), operationSecurity).then((res: UpdatePetRawResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -532,17 +543,18 @@ uploads an image
 
 ```typescript
 import { Test } from "Test";
-import { UploadFileResponse } from "Test/dist/sdk/models/operations";
+import { UploadFileResponse, UploadFileSecurity } from "Test/dist/sdk/models/operations";
 
 const sdk = new Test();
+const operationSecurity: UploadFileSecurity = {
+  petstoreAuth: "",
+};
 
 sdk.pet.uploadFile({
   requestBody: "sequi".encode(),
   additionalMetadata: "tenetur",
   petId: 368725,
-}, {
-  petstoreAuth: "",
-}).then((res: UploadFileResponse) => {
+}, operationSecurity).then((res: UploadFileResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
