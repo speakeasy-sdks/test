@@ -45,9 +45,7 @@ export class Store {
             this.sdkConfiguration.serverDefaults
         );
         const url: string = utils.generateURL(baseURL, "/store/order/{orderId}", req);
-
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
 
@@ -98,16 +96,12 @@ export class Store {
             this.sdkConfiguration.serverDefaults
         );
         const url: string = baseURL.replace(/\/$/, "") + "/store/inventory";
-
+        const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetInventorySecurity(security);
         }
-        const client: AxiosInstance = utils.createSecurityClient(
-            this.sdkConfiguration.defaultClient,
-            security
-        );
-
-        const headers = { ...config?.headers };
+        const properties = utils.parseSecurityProperties(security);
+        const headers = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "application/json";
 
         headers[
@@ -175,9 +169,7 @@ export class Store {
             this.sdkConfiguration.serverDefaults
         );
         const url: string = utils.generateURL(baseURL, "/store/order/{orderId}", req);
-
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-
         const headers = { ...config?.headers };
         if (acceptHeaderOverride !== undefined) {
             headers["Accept"] = acceptHeaderOverride.toString();
@@ -261,9 +253,7 @@ export class Store {
                 throw new Error(`Error serializing request body, cause: ${e.message}`);
             }
         }
-
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-
         const headers = { ...reqBodyHeaders, ...config?.headers };
         headers["Accept"] = "application/json";
 
@@ -342,9 +332,7 @@ export class Store {
                 throw new Error(`Error serializing request body, cause: ${e.message}`);
             }
         }
-
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-
         const headers = { ...reqBodyHeaders, ...config?.headers };
         headers["Accept"] = "application/json";
 
@@ -419,9 +407,7 @@ export class Store {
                 throw new Error(`Error serializing request body, cause: ${e.message}`);
             }
         }
-
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-
         const headers = { ...reqBodyHeaders, ...config?.headers };
         headers["Accept"] = "application/json";
 

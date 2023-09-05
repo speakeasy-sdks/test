@@ -79,9 +79,7 @@ export class User {
                 throw new Error(`Error serializing request body, cause: ${e.message}`);
             }
         }
-
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-
         const headers = { ...reqBodyHeaders, ...config?.headers };
         if (acceptHeaderOverride !== undefined) {
             headers["Accept"] = acceptHeaderOverride.toString();
@@ -165,9 +163,7 @@ export class User {
                 throw new Error(`Error serializing request body, cause: ${e.message}`);
             }
         }
-
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-
         const headers = { ...reqBodyHeaders, ...config?.headers };
         if (acceptHeaderOverride !== undefined) {
             headers["Accept"] = acceptHeaderOverride.toString();
@@ -247,9 +243,7 @@ export class User {
                 throw new Error(`Error serializing request body, cause: ${e.message}`);
             }
         }
-
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-
         const headers = { ...reqBodyHeaders, ...config?.headers };
         if (acceptHeaderOverride !== undefined) {
             headers["Accept"] = acceptHeaderOverride.toString();
@@ -329,9 +323,7 @@ export class User {
                 throw new Error(`Error serializing request body, cause: ${e.message}`);
             }
         }
-
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-
         const headers = { ...reqBodyHeaders, ...config?.headers };
         if (acceptHeaderOverride !== undefined) {
             headers["Accept"] = acceptHeaderOverride.toString();
@@ -407,9 +399,7 @@ export class User {
             this.sdkConfiguration.serverDefaults
         );
         const url: string = utils.generateURL(baseURL, "/user/{username}", req);
-
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
 
@@ -462,9 +452,7 @@ export class User {
             this.sdkConfiguration.serverDefaults
         );
         const url: string = utils.generateURL(baseURL, "/user/{username}", req);
-
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-
         const headers = { ...config?.headers };
         if (acceptHeaderOverride !== undefined) {
             headers["Accept"] = acceptHeaderOverride.toString();
@@ -536,9 +524,7 @@ export class User {
             this.sdkConfiguration.serverDefaults
         );
         const url: string = baseURL.replace(/\/$/, "") + "/user/login";
-
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-
         const headers = { ...config?.headers };
         const queryParams: string = utils.serializeQueryParams(req);
         if (acceptHeaderOverride !== undefined) {
@@ -604,9 +590,7 @@ export class User {
             this.sdkConfiguration.serverDefaults
         );
         const url: string = baseURL.replace(/\/$/, "") + "/user/logout";
-
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
 
@@ -671,9 +655,7 @@ export class User {
                 throw new Error(`Error serializing request body, cause: ${e.message}`);
             }
         }
-
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-
         const headers = { ...reqBodyHeaders, ...config?.headers };
         headers["Accept"] = "*/*";
 
@@ -739,9 +721,7 @@ export class User {
                 throw new Error(`Error serializing request body, cause: ${e.message}`);
             }
         }
-
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-
         const headers = { ...reqBodyHeaders, ...config?.headers };
         headers["Accept"] = "*/*";
 
@@ -807,9 +787,7 @@ export class User {
                 throw new Error(`Error serializing request body, cause: ${e.message}`);
             }
         }
-
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-
         const headers = { ...reqBodyHeaders, ...config?.headers };
         headers["Accept"] = "*/*";
 
