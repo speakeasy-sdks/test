@@ -28,7 +28,7 @@ import { DeleteOrderResponse } from "Test/dist/sdk/models/operations";
 const sdk = new Test();
 
 sdk.store.deleteOrder({
-  orderId: 662527,
+  orderId: 414662,
 }).then((res: DeleteOrderResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -97,7 +97,7 @@ import { GetOrderByIdResponse } from "Test/dist/sdk/models/operations";
 const sdk = new Test();
 
 sdk.store.getOrderById({
-  orderId: 820994,
+  orderId: 473600,
 }).then((res: GetOrderByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -136,7 +136,7 @@ sdk.store.placeOrderForm({
   id: 10,
   petId: 198772,
   quantity: 7,
-  shipDate: new Date("2022-11-26T13:23:33.410Z"),
+  shipDate: new Date("2022-10-24T23:43:42.369Z"),
   status: OrderStatus.Approved,
 }).then((res: PlaceOrderFormResponse) => {
   if (res.statusCode == 200) {
@@ -176,7 +176,7 @@ sdk.store.placeOrderJson({
   id: 10,
   petId: 198772,
   quantity: 7,
-  shipDate: new Date("2021-04-29T07:12:18.684Z"),
+  shipDate: new Date("2020-10-16T01:47:24.760Z"),
   status: OrderStatus.Approved,
 }).then((res: PlaceOrderJsonResponse) => {
   if (res.statusCode == 200) {
@@ -211,7 +211,7 @@ import { OrderStatus } from "Test/dist/sdk/models/shared";
 
 const sdk = new Test();
 
-sdk.store.placeOrderRaw("laborum".encode()).then((res: PlaceOrderRawResponse) => {
+sdk.store.placeOrderRaw("esse".encode()).then((res: PlaceOrderRawResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

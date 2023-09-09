@@ -45,25 +45,13 @@ sdk.pet.addPetForm({
   id: 10,
   name: "doggie",
   photoUrls: [
-    "ipsam",
+    "vel",
   ],
-  status: PetStatus.Sold,
+  status: PetStatus.Pending,
   tags: [
     {
-      id: 778157,
-      name: "Teri Strosin",
-    },
-    {
-      id: 799159,
-      name: "Erik Lebsack",
-    },
-    {
-      id: 118274,
-      name: "Luke McCullough",
-    },
-    {
-      id: 944669,
-      name: "Everett Breitenberg",
+      id: 645894,
+      name: "Willie Gulgowski DVM",
     },
   ],
 }, operationSecurity).then((res: AddPetFormResponse) => {
@@ -111,18 +99,13 @@ sdk.pet.addPetJson({
   id: 10,
   name: "doggie",
   photoUrls: [
-    "qui",
-    "impedit",
+    "tempora",
   ],
-  status: PetStatus.Sold,
+  status: PetStatus.Pending,
   tags: [
     {
-      id: 216550,
-      name: "Brandon Auer",
-    },
-    {
-      id: 149675,
-      name: "Curtis Morissette",
+      id: 477665,
+      name: "Irving Lehner",
     },
   ],
 }, operationSecurity).then((res: AddPetJsonResponse) => {
@@ -162,7 +145,7 @@ const operationSecurity: AddPetRawSecurity = {
   petstoreAuth: "",
 };
 
-sdk.pet.addPetRaw("saepe".encode(), operationSecurity).then((res: AddPetRawResponse) => {
+sdk.pet.addPetRaw("nisi".encode(), operationSecurity).then((res: AddPetRawResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -199,8 +182,8 @@ const operationSecurity: DeletePetSecurity = {
 };
 
 sdk.pet.deletePet({
-  apiKey: "fuga",
-  petId: 449950,
+  apiKey: "recusandae",
+  petId: 836079,
 }, operationSecurity).then((res: DeletePetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -238,7 +221,7 @@ const operationSecurity: FindPetsByStatusSecurity = {
 };
 
 sdk.pet.findPetsByStatus({
-  status: FindPetsByStatusStatus.Pending,
+  status: FindPetsByStatusStatus.Available,
 }, operationSecurity).then((res: FindPetsByStatusResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -277,9 +260,7 @@ const operationSecurity: FindPetsByTagsSecurity = {
 
 sdk.pet.findPetsByTags({
   tags: [
-    "iure",
-    "saepe",
-    "quidem",
+    "quis",
   ],
 }, operationSecurity).then((res: FindPetsByTagsResponse) => {
   if (res.statusCode == 200) {
@@ -318,7 +299,7 @@ const operationSecurity: GetPetByIdSecurity = {
 };
 
 sdk.pet.getPetById({
-  petId: 99280,
+  petId: 87129,
 }, operationSecurity).then((res: GetPetByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -356,9 +337,9 @@ const operationSecurity: UpdatePetWithFormSecurity = {
 };
 
 sdk.pet.updatePetWithForm({
-  name: "Lela Orn",
-  petId: 170909,
-  status: "dolorem",
+  name: "Christopher Hills",
+  petId: 778157,
+  status: "odit",
 }, operationSecurity).then((res: UpdatePetWithFormResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -404,22 +385,13 @@ sdk.pet.updatePetForm({
   id: 10,
   name: "doggie",
   photoUrls: [
-    "explicabo",
-    "nobis",
+    "at",
   ],
-  status: PetStatus.Available,
+  status: PetStatus.Sold,
   tags: [
     {
-      id: 363711,
-      name: "Velma Batz",
-    },
-    {
-      id: 988374,
-      name: "Juan O'Hara",
-    },
-    {
-      id: 161309,
-      name: "Shaun McCullough",
+      id: 978619,
+      name: "Bernadette Schmidt",
     },
   ],
 }, operationSecurity).then((res: UpdatePetFormResponse) => {
@@ -467,14 +439,13 @@ sdk.pet.updatePetJson({
   id: 10,
   name: "doggie",
   photoUrls: [
-    "molestiae",
-    "velit",
+    "porro",
   ],
-  status: PetStatus.Pending,
+  status: PetStatus.Sold,
   tags: [
     {
-      id: 338007,
-      name: "Kayla O'Kon",
+      id: 118274,
+      name: "Luke McCullough",
     },
   ],
 }, operationSecurity).then((res: UpdatePetJsonResponse) => {
@@ -514,7 +485,7 @@ const operationSecurity: UpdatePetRawSecurity = {
   petstoreAuth: "",
 };
 
-sdk.pet.updatePetRaw("quo".encode(), operationSecurity).then((res: UpdatePetRawResponse) => {
+sdk.pet.updatePetRaw("hic".encode(), operationSecurity).then((res: UpdatePetRawResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -551,9 +522,9 @@ const operationSecurity: UploadFileSecurity = {
 };
 
 sdk.pet.uploadFile({
-  requestBody: "sequi".encode(),
-  additionalMetadata: "tenetur",
-  petId: 368725,
+  requestBody: "optio".encode(),
+  additionalMetadata: "totam",
+  petId: 105907,
 }, operationSecurity).then((res: UploadFileResponse) => {
   if (res.statusCode == 200) {
     // handle response

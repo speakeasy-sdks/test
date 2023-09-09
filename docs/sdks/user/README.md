@@ -112,7 +112,7 @@ import { CreateUserRawResponse } from "Test/dist/sdk/models/operations";
 
 const sdk = new Test();
 
-sdk.user.createUserRaw("quasi".encode()).then((res: CreateUserRawResponse) => {
+sdk.user.createUserRaw("ipsum".encode()).then((res: CreateUserRawResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -145,36 +145,6 @@ import { CreateUsersWithListInputResponse } from "Test/dist/sdk/models/operation
 const sdk = new Test();
 
 sdk.user.createUsersWithListInput([
-  {
-    email: "john@email.com",
-    firstName: "John",
-    id: 10,
-    lastName: "James",
-    password: "12345",
-    phone: "12345",
-    userStatus: 1,
-    username: "theUser",
-  },
-  {
-    email: "john@email.com",
-    firstName: "John",
-    id: 10,
-    lastName: "James",
-    password: "12345",
-    phone: "12345",
-    userStatus: 1,
-    username: "theUser",
-  },
-  {
-    email: "john@email.com",
-    firstName: "John",
-    id: 10,
-    lastName: "James",
-    password: "12345",
-    phone: "12345",
-    userStatus: 1,
-    username: "theUser",
-  },
   {
     email: "john@email.com",
     firstName: "John",
@@ -218,7 +188,7 @@ import { DeleteUserResponse } from "Test/dist/sdk/models/operations";
 const sdk = new Test();
 
 sdk.user.deleteUser({
-  username: "Weston_Thiel",
+  username: "Keshaun32",
 }).then((res: DeleteUserResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -252,7 +222,7 @@ import { GetUserByNameResponse } from "Test/dist/sdk/models/operations";
 const sdk = new Test();
 
 sdk.user.getUserByName({
-  username: "Whitney.Bednar",
+  username: "Lia.Cormier",
 }).then((res: GetUserByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -286,8 +256,8 @@ import { LoginUserResponse } from "Test/dist/sdk/models/operations";
 const sdk = new Test();
 
 sdk.user.loginUser({
-  password: "cum",
-  username: "Aiyana.Batz",
+  password: "natus",
+  username: "Gertrude_Welch44",
 }).then((res: LoginUserResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -362,7 +332,7 @@ sdk.user.updateUserForm({
     userStatus: 1,
     username: "theUser",
   },
-  username: "Wilfrid.Carter",
+  username: "Floy_Moore",
 }).then((res: UpdateUserFormResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -406,7 +376,7 @@ sdk.user.updateUserJson({
     userStatus: 1,
     username: "theUser",
   },
-  username: "Jayden.Carter88",
+  username: "Maxie96",
 }).then((res: UpdateUserJsonResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -440,8 +410,8 @@ import { UpdateUserRawResponse } from "Test/dist/sdk/models/operations";
 const sdk = new Test();
 
 sdk.user.updateUserRaw({
-  requestBody: "commodi".encode(),
-  username: "Terrill69",
+  requestBody: "est".encode(),
+  username: "Madaline21",
 }).then((res: UpdateUserRawResponse) => {
   if (res.statusCode == 200) {
     // handle response

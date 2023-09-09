@@ -19,27 +19,13 @@ sdk.pet.addPetForm({
   id: 10,
   name: "doggie",
   photoUrls: [
-    "provident",
-    "distinctio",
-    "quibusdam",
+    "corrupti",
   ],
   status: PetStatus.Pending,
   tags: [
     {
-      id: 544883,
-      name: "Ben Mueller",
-    },
-    {
-      id: 437587,
-      name: "Raquel Bednar",
-    },
-    {
-      id: 383441,
-      name: "Alexandra Schulist",
-    },
-    {
-      id: 568045,
-      name: "Mrs. Sophie Smith MD",
+      id: 715190,
+      name: "Stuart Stiedemann",
     },
   ],
 }, operationSecurity).then((res: AddPetFormResponse) => {

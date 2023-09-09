@@ -16,9 +16,6 @@ export enum PetStatus {
     Sold = "sold",
 }
 
-/**
- * Create a new pet in the store
- */
 export class Pet extends SpeakeasyBase {
     @SpeakeasyMetadata({ data: "form, name=category;json=true" })
     @Expose({ name: "category" })
