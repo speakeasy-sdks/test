@@ -88,7 +88,7 @@ export class Pet {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/pet";
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "request", "form");
@@ -103,8 +103,7 @@ export class Pet {
         }
         const properties = utils.parseSecurityProperties(security);
         const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
-        if (reqBody == null || Object.keys(reqBody).length === 0)
-            throw new Error("request body is required");
+        if (reqBody == null) throw new Error("request body is required");
         if (acceptHeaderOverride !== undefined) {
             headers["Accept"] = acceptHeaderOverride.toString();
         } else {
@@ -181,7 +180,7 @@ export class Pet {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/pet";
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "request", "json");
@@ -196,8 +195,7 @@ export class Pet {
         }
         const properties = utils.parseSecurityProperties(security);
         const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
-        if (reqBody == null || Object.keys(reqBody).length === 0)
-            throw new Error("request body is required");
+        if (reqBody == null) throw new Error("request body is required");
         if (acceptHeaderOverride !== undefined) {
             headers["Accept"] = acceptHeaderOverride.toString();
         } else {
@@ -270,7 +268,7 @@ export class Pet {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/pet";
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "request", "raw");
@@ -285,8 +283,7 @@ export class Pet {
         }
         const properties = utils.parseSecurityProperties(security);
         const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
-        if (reqBody == null || Object.keys(reqBody).length === 0)
-            throw new Error("request body is required");
+        if (reqBody == null) throw new Error("request body is required");
         if (acceptHeaderOverride !== undefined) {
             headers["Accept"] = acceptHeaderOverride.toString();
         } else {
@@ -736,7 +733,7 @@ export class Pet {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/pet";
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "request", "form");
@@ -751,8 +748,7 @@ export class Pet {
         }
         const properties = utils.parseSecurityProperties(security);
         const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
-        if (reqBody == null || Object.keys(reqBody).length === 0)
-            throw new Error("request body is required");
+        if (reqBody == null) throw new Error("request body is required");
         if (acceptHeaderOverride !== undefined) {
             headers["Accept"] = acceptHeaderOverride.toString();
         } else {
@@ -829,7 +825,7 @@ export class Pet {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/pet";
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "request", "json");
@@ -844,8 +840,7 @@ export class Pet {
         }
         const properties = utils.parseSecurityProperties(security);
         const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
-        if (reqBody == null || Object.keys(reqBody).length === 0)
-            throw new Error("request body is required");
+        if (reqBody == null) throw new Error("request body is required");
         if (acceptHeaderOverride !== undefined) {
             headers["Accept"] = acceptHeaderOverride.toString();
         } else {
@@ -918,7 +913,7 @@ export class Pet {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/pet";
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "request", "raw");
@@ -933,8 +928,7 @@ export class Pet {
         }
         const properties = utils.parseSecurityProperties(security);
         const headers = { ...reqBodyHeaders, ...config?.headers, ...properties.headers };
-        if (reqBody == null || Object.keys(reqBody).length === 0)
-            throw new Error("request body is required");
+        if (reqBody == null) throw new Error("request body is required");
         if (acceptHeaderOverride !== undefined) {
             headers["Accept"] = acceptHeaderOverride.toString();
         } else {
@@ -1007,7 +1001,7 @@ export class Pet {
         );
         const url: string = utils.generateURL(baseURL, "/pet/{petId}/uploadImage", req);
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "requestBody", "raw");

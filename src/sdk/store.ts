@@ -244,7 +244,7 @@ export class Store {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/store/order";
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "request", "form");
@@ -323,7 +323,7 @@ export class Store {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/store/order";
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "request", "json");
@@ -398,7 +398,7 @@ export class Store {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/store/order";
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "request", "raw");
