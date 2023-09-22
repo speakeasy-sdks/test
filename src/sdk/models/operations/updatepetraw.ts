@@ -6,11 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import * as shared from "../shared";
 import { AxiosResponse } from "axios";
 
-export class UpdatePetRawSecurity extends SpeakeasyBase {
-    @SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2;name=Authorization" })
-    petstoreAuth: string;
-}
-
 export class UpdatePetRawResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     body?: Uint8Array;

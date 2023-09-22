@@ -25,10 +25,14 @@ For valid response try integer IDs with value < 1000. Anything above 1000 or non
 import { Test } from "Test";
 import { DeleteOrderResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test();
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
 sdk.store.deleteOrder({
-  orderId: 414662,
+  orderId: 135218,
 }).then((res: DeleteOrderResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -94,10 +98,14 @@ For valid response try integer IDs with value <= 5 or > 10. Other values will ge
 import { Test } from "Test";
 import { GetOrderByIdResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test();
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
 sdk.store.getOrderById({
-  orderId: 473600,
+  orderId: 18789,
 }).then((res: GetOrderByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -129,14 +137,18 @@ import { Test } from "Test";
 import { PlaceOrderFormResponse } from "Test/dist/sdk/models/operations";
 import { OrderStatus } from "Test/dist/sdk/models/shared";
 
-const sdk = new Test();
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
 sdk.store.placeOrderForm({
   complete: false,
   id: 10,
   petId: 198772,
   quantity: 7,
-  shipDate: new Date("2022-10-24T23:43:42.369Z"),
+  shipDate: new Date("2022-05-20T13:30:46.463Z"),
   status: OrderStatus.Approved,
 }).then((res: PlaceOrderFormResponse) => {
   if (res.statusCode == 200) {
@@ -169,14 +181,18 @@ import { Test } from "Test";
 import { PlaceOrderJsonResponse } from "Test/dist/sdk/models/operations";
 import { OrderStatus } from "Test/dist/sdk/models/shared";
 
-const sdk = new Test();
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
 sdk.store.placeOrderJson({
   complete: false,
   id: 10,
   petId: 198772,
   quantity: 7,
-  shipDate: new Date("2020-10-16T01:47:24.760Z"),
+  shipDate: new Date("2022-05-22T14:02:28.908Z"),
   status: OrderStatus.Approved,
 }).then((res: PlaceOrderJsonResponse) => {
   if (res.statusCode == 200) {
@@ -209,9 +225,13 @@ import { Test } from "Test";
 import { PlaceOrderRawResponse } from "Test/dist/sdk/models/operations";
 import { OrderStatus } from "Test/dist/sdk/models/shared";
 
-const sdk = new Test();
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
-sdk.store.placeOrderRaw("esse".encode()).then((res: PlaceOrderRawResponse) => {
+sdk.store.placeOrderRaw("dolor".encode()).then((res: PlaceOrderRawResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

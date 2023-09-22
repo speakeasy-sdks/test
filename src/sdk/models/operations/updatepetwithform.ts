@@ -5,11 +5,6 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { AxiosResponse } from "axios";
 
-export class UpdatePetWithFormSecurity extends SpeakeasyBase {
-    @SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2;name=Authorization" })
-    petstoreAuth: string;
-}
-
 export class UpdatePetWithFormRequest extends SpeakeasyBase {
     /**
      * Name of pet that needs to be updated

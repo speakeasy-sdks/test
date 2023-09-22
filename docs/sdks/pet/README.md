@@ -29,69 +29,16 @@ Add a new pet to the store
 
 ```typescript
 import { Test } from "Test";
-import { AddPetFormResponse, AddPetFormSecurity } from "Test/dist/sdk/models/operations";
+import { AddPetFormResponse } from "Test/dist/sdk/models/operations";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
-const sdk = new Test();
-const operationSecurity: AddPetFormSecurity = {
-  petstoreAuth: "",
-};
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
 sdk.pet.addPetForm({
-  category: {
-    id: 1,
-    name: "Dogs",
-  },
-  id: 10,
-  name: "doggie",
-  photoUrls: [
-    "vel",
-  ],
-  status: PetStatus.Pending,
-  tags: [
-    {
-      id: 645894,
-      name: "Willie Gulgowski DVM",
-    },
-  ],
-}, operationSecurity).then((res: AddPetFormResponse) => {
-  if (res.statusCode == 200) {
-    // handle response
-  }
-});
-```
-
-### Parameters
-
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `request`                                                                      | [shared.Pet](../../models/shared/pet.md)                                       | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
-| `security`                                                                     | [operations.AddPetFormSecurity](../../models/operations/addpetformsecurity.md) | :heavy_check_mark:                                                             | The security requirements to use for the request.                              |
-| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
-
-
-### Response
-
-**Promise<[operations.AddPetFormResponse](../../models/operations/addpetformresponse.md)>**
-
-
-## addPetJson
-
-Add a new pet to the store
-
-### Example Usage
-
-```typescript
-import { Test } from "Test";
-import { AddPetJsonResponse, AddPetJsonSecurity } from "Test/dist/sdk/models/operations";
-import { PetStatus } from "Test/dist/sdk/models/shared";
-
-const sdk = new Test();
-const operationSecurity: AddPetJsonSecurity = {
-  petstoreAuth: "",
-};
-
-sdk.pet.addPetJson({
   category: {
     id: 1,
     name: "Dogs",
@@ -108,7 +55,7 @@ sdk.pet.addPetJson({
       name: "Irving Lehner",
     },
   ],
-}, operationSecurity).then((res: AddPetJsonResponse) => {
+}).then((res: AddPetFormResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -117,11 +64,64 @@ sdk.pet.addPetJson({
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `request`                                                                      | [shared.Pet](../../models/shared/pet.md)                                       | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
-| `security`                                                                     | [operations.AddPetJsonSecurity](../../models/operations/addpetjsonsecurity.md) | :heavy_check_mark:                                                             | The security requirements to use for the request.                              |
-| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
+| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `request`                                                    | [shared.Pet](../../models/shared/pet.md)                     | :heavy_check_mark:                                           | The request object to use for the request.                   |
+| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
+
+
+### Response
+
+**Promise<[operations.AddPetFormResponse](../../models/operations/addpetformresponse.md)>**
+
+
+## addPetJson
+
+Add a new pet to the store
+
+### Example Usage
+
+```typescript
+import { Test } from "Test";
+import { AddPetJsonResponse } from "Test/dist/sdk/models/operations";
+import { PetStatus } from "Test/dist/sdk/models/shared";
+
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
+
+sdk.pet.addPetJson({
+  category: {
+    id: 1,
+    name: "Dogs",
+  },
+  id: 10,
+  name: "doggie",
+  photoUrls: [
+    "nisi",
+  ],
+  status: PetStatus.Sold,
+  tags: [
+    {
+      id: 836079,
+      name: "Erica Bogisich III",
+    },
+  ],
+}).then((res: AddPetJsonResponse) => {
+  if (res.statusCode == 200) {
+    // handle response
+  }
+});
+```
+
+### Parameters
+
+| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `request`                                                    | [shared.Pet](../../models/shared/pet.md)                     | :heavy_check_mark:                                           | The request object to use for the request.                   |
+| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
 
 
 ### Response
@@ -137,15 +137,16 @@ Add a new pet to the store
 
 ```typescript
 import { Test } from "Test";
-import { AddPetRawResponse, AddPetRawSecurity } from "Test/dist/sdk/models/operations";
+import { AddPetRawResponse } from "Test/dist/sdk/models/operations";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
-const sdk = new Test();
-const operationSecurity: AddPetRawSecurity = {
-  petstoreAuth: "",
-};
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
-sdk.pet.addPetRaw("nisi".encode(), operationSecurity).then((res: AddPetRawResponse) => {
+sdk.pet.addPetRaw("repellendus".encode()).then((res: AddPetRawResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -154,11 +155,10 @@ sdk.pet.addPetRaw("nisi".encode(), operationSecurity).then((res: AddPetRawRespon
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `request`                                                                    | [Uint8Array](../../models//.md)                                              | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
-| `security`                                                                   | [operations.AddPetRawSecurity](../../models/operations/addpetrawsecurity.md) | :heavy_check_mark:                                                           | The security requirements to use for the request.                            |
-| `config`                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                 | :heavy_minus_sign:                                                           | Available config options for making requests.                                |
+| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `request`                                                    | [Uint8Array](../../models//.md)                              | :heavy_check_mark:                                           | The request object to use for the request.                   |
+| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
 
 
 ### Response
@@ -174,17 +174,18 @@ Deletes a pet
 
 ```typescript
 import { Test } from "Test";
-import { DeletePetResponse, DeletePetSecurity } from "Test/dist/sdk/models/operations";
+import { DeletePetResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test();
-const operationSecurity: DeletePetSecurity = {
-  petstoreAuth: "",
-};
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
 sdk.pet.deletePet({
-  apiKey: "recusandae",
-  petId: 836079,
-}, operationSecurity).then((res: DeletePetResponse) => {
+  apiKey: "sapiente",
+  petId: 778157,
+}).then((res: DeletePetResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -193,11 +194,10 @@ sdk.pet.deletePet({
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `request`                                                                    | [operations.DeletePetRequest](../../models/operations/deletepetrequest.md)   | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
-| `security`                                                                   | [operations.DeletePetSecurity](../../models/operations/deletepetsecurity.md) | :heavy_check_mark:                                                           | The security requirements to use for the request.                            |
-| `config`                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                 | :heavy_minus_sign:                                                           | Available config options for making requests.                                |
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `request`                                                                  | [operations.DeletePetRequest](../../models/operations/deletepetrequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
+| `config`                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)               | :heavy_minus_sign:                                                         | Available config options for making requests.                              |
 
 
 ### Response
@@ -213,16 +213,17 @@ Multiple status values can be provided with comma separated strings
 
 ```typescript
 import { Test } from "Test";
-import { FindPetsByStatusResponse, FindPetsByStatusSecurity, FindPetsByStatusStatus } from "Test/dist/sdk/models/operations";
+import { FindPetsByStatusResponse, FindPetsByStatusStatus } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test();
-const operationSecurity: FindPetsByStatusSecurity = {
-  petstoreAuth: "",
-};
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
 sdk.pet.findPetsByStatus({
   status: FindPetsByStatusStatus.Available,
-}, operationSecurity).then((res: FindPetsByStatusResponse) => {
+}).then((res: FindPetsByStatusResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -231,11 +232,10 @@ sdk.pet.findPetsByStatus({
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.FindPetsByStatusRequest](../../models/operations/findpetsbystatusrequest.md)   | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `security`                                                                                 | [operations.FindPetsByStatusSecurity](../../models/operations/findpetsbystatussecurity.md) | :heavy_check_mark:                                                                         | The security requirements to use for the request.                                          |
-| `config`                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                               | :heavy_minus_sign:                                                                         | Available config options for making requests.                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.FindPetsByStatusRequest](../../models/operations/findpetsbystatusrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `config`                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                             | :heavy_minus_sign:                                                                       | Available config options for making requests.                                            |
 
 
 ### Response
@@ -251,18 +251,19 @@ Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3
 
 ```typescript
 import { Test } from "Test";
-import { FindPetsByTagsResponse, FindPetsByTagsSecurity } from "Test/dist/sdk/models/operations";
+import { FindPetsByTagsResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test();
-const operationSecurity: FindPetsByTagsSecurity = {
-  petstoreAuth: "",
-};
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
 sdk.pet.findPetsByTags({
   tags: [
-    "quis",
+    "at",
   ],
-}, operationSecurity).then((res: FindPetsByTagsResponse) => {
+}).then((res: FindPetsByTagsResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -271,11 +272,10 @@ sdk.pet.findPetsByTags({
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.FindPetsByTagsRequest](../../models/operations/findpetsbytagsrequest.md)   | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `security`                                                                             | [operations.FindPetsByTagsSecurity](../../models/operations/findpetsbytagssecurity.md) | :heavy_check_mark:                                                                     | The security requirements to use for the request.                                      |
-| `config`                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                           | :heavy_minus_sign:                                                                     | Available config options for making requests.                                          |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.FindPetsByTagsRequest](../../models/operations/findpetsbytagsrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
 
 
 ### Response
@@ -299,7 +299,7 @@ const operationSecurity: GetPetByIdSecurity = {
 };
 
 sdk.pet.getPetById({
-  petId: 87129,
+  petId: 870088,
 }, operationSecurity).then((res: GetPetByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -329,18 +329,19 @@ Updates a pet in the store with form data
 
 ```typescript
 import { Test } from "Test";
-import { UpdatePetWithFormResponse, UpdatePetWithFormSecurity } from "Test/dist/sdk/models/operations";
+import { UpdatePetWithFormResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test();
-const operationSecurity: UpdatePetWithFormSecurity = {
-  petstoreAuth: "",
-};
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
 sdk.pet.updatePetWithForm({
-  name: "Christopher Hills",
-  petId: 778157,
-  status: "odit",
-}, operationSecurity).then((res: UpdatePetWithFormResponse) => {
+  name: "Javier Schmidt",
+  petId: 520478,
+  status: "porro",
+}).then((res: UpdatePetWithFormResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -349,11 +350,10 @@ sdk.pet.updatePetWithForm({
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.UpdatePetWithFormRequest](../../models/operations/updatepetwithformrequest.md)   | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `security`                                                                                   | [operations.UpdatePetWithFormSecurity](../../models/operations/updatepetwithformsecurity.md) | :heavy_check_mark:                                                                           | The security requirements to use for the request.                                            |
-| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.UpdatePetWithFormRequest](../../models/operations/updatepetwithformrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `config`                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                               | :heavy_minus_sign:                                                                         | Available config options for making requests.                                              |
 
 
 ### Response
@@ -369,13 +369,14 @@ Update an existing pet by Id
 
 ```typescript
 import { Test } from "Test";
-import { UpdatePetFormResponse, UpdatePetFormSecurity } from "Test/dist/sdk/models/operations";
+import { UpdatePetFormResponse } from "Test/dist/sdk/models/operations";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
-const sdk = new Test();
-const operationSecurity: UpdatePetFormSecurity = {
-  petstoreAuth: "",
-};
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
 sdk.pet.updatePetForm({
   category: {
@@ -385,16 +386,16 @@ sdk.pet.updatePetForm({
   id: 10,
   name: "doggie",
   photoUrls: [
-    "at",
+    "dolorum",
   ],
-  status: PetStatus.Sold,
+  status: PetStatus.Available,
   tags: [
     {
-      id: 978619,
-      name: "Bernadette Schmidt",
+      id: 720633,
+      name: "Seth Conroy",
     },
   ],
-}, operationSecurity).then((res: UpdatePetFormResponse) => {
+}).then((res: UpdatePetFormResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -403,11 +404,10 @@ sdk.pet.updatePetForm({
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [shared.Pet](../../models/shared/pet.md)                                             | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `security`                                                                           | [operations.UpdatePetFormSecurity](../../models/operations/updatepetformsecurity.md) | :heavy_check_mark:                                                                   | The security requirements to use for the request.                                    |
-| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
+| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `request`                                                    | [shared.Pet](../../models/shared/pet.md)                     | :heavy_check_mark:                                           | The request object to use for the request.                   |
+| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
 
 
 ### Response
@@ -423,13 +423,14 @@ Update an existing pet by Id
 
 ```typescript
 import { Test } from "Test";
-import { UpdatePetJsonResponse, UpdatePetJsonSecurity } from "Test/dist/sdk/models/operations";
+import { UpdatePetJsonResponse } from "Test/dist/sdk/models/operations";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
-const sdk = new Test();
-const operationSecurity: UpdatePetJsonSecurity = {
-  petstoreAuth: "",
-};
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
 sdk.pet.updatePetJson({
   category: {
@@ -439,16 +440,16 @@ sdk.pet.updatePetJson({
   id: 10,
   name: "doggie",
   photoUrls: [
-    "porro",
+    "optio",
   ],
-  status: PetStatus.Sold,
+  status: PetStatus.Pending,
   tags: [
     {
-      id: 118274,
-      name: "Luke McCullough",
+      id: 105907,
+      name: "Tanya Gleason",
     },
   ],
-}, operationSecurity).then((res: UpdatePetJsonResponse) => {
+}).then((res: UpdatePetJsonResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -457,11 +458,10 @@ sdk.pet.updatePetJson({
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [shared.Pet](../../models/shared/pet.md)                                             | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `security`                                                                           | [operations.UpdatePetJsonSecurity](../../models/operations/updatepetjsonsecurity.md) | :heavy_check_mark:                                                                   | The security requirements to use for the request.                                    |
-| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
+| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `request`                                                    | [shared.Pet](../../models/shared/pet.md)                     | :heavy_check_mark:                                           | The request object to use for the request.                   |
+| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
 
 
 ### Response
@@ -477,15 +477,16 @@ Update an existing pet by Id
 
 ```typescript
 import { Test } from "Test";
-import { UpdatePetRawResponse, UpdatePetRawSecurity } from "Test/dist/sdk/models/operations";
+import { UpdatePetRawResponse } from "Test/dist/sdk/models/operations";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
-const sdk = new Test();
-const operationSecurity: UpdatePetRawSecurity = {
-  petstoreAuth: "",
-};
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
-sdk.pet.updatePetRaw("hic".encode(), operationSecurity).then((res: UpdatePetRawResponse) => {
+sdk.pet.updatePetRaw("cum".encode()).then((res: UpdatePetRawResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -494,11 +495,10 @@ sdk.pet.updatePetRaw("hic".encode(), operationSecurity).then((res: UpdatePetRawR
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [Uint8Array](../../models//.md)                                                    | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `security`                                                                         | [operations.UpdatePetRawSecurity](../../models/operations/updatepetrawsecurity.md) | :heavy_check_mark:                                                                 | The security requirements to use for the request.                                  |
-| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
+| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `request`                                                    | [Uint8Array](../../models//.md)                              | :heavy_check_mark:                                           | The request object to use for the request.                   |
+| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
 
 
 ### Response
@@ -514,18 +514,19 @@ uploads an image
 
 ```typescript
 import { Test } from "Test";
-import { UploadFileResponse, UploadFileSecurity } from "Test/dist/sdk/models/operations";
+import { UploadFileResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test();
-const operationSecurity: UploadFileSecurity = {
-  petstoreAuth: "",
-};
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
 sdk.pet.uploadFile({
-  requestBody: "optio".encode(),
-  additionalMetadata: "totam",
-  petId: 105907,
-}, operationSecurity).then((res: UploadFileResponse) => {
+  requestBody: "esse".encode(),
+  additionalMetadata: "ipsum",
+  petId: 568434,
+}).then((res: UploadFileResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -534,11 +535,10 @@ sdk.pet.uploadFile({
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `request`                                                                      | [operations.UploadFileRequest](../../models/operations/uploadfilerequest.md)   | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
-| `security`                                                                     | [operations.UploadFileSecurity](../../models/operations/uploadfilesecurity.md) | :heavy_check_mark:                                                             | The security requirements to use for the request.                              |
-| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
+| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `request`                                                                    | [operations.UploadFileRequest](../../models/operations/uploadfilerequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| `config`                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                 | :heavy_minus_sign:                                                           | Available config options for making requests.                                |
 
 
 ### Response

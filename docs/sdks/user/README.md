@@ -28,7 +28,11 @@ This can only be done by the logged in user.
 import { Test } from "Test";
 import { CreateUserFormResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test();
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
 sdk.user.createUserForm({
   email: "john@email.com",
@@ -69,7 +73,11 @@ This can only be done by the logged in user.
 import { Test } from "Test";
 import { CreateUserJsonResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test();
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
 sdk.user.createUserJson({
   email: "john@email.com",
@@ -110,9 +118,13 @@ This can only be done by the logged in user.
 import { Test } from "Test";
 import { CreateUserRawResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test();
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
-sdk.user.createUserRaw("ipsum".encode()).then((res: CreateUserRawResponse) => {
+sdk.user.createUserRaw("natus".encode()).then((res: CreateUserRawResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -142,7 +154,11 @@ Creates list of users with given input array
 import { Test } from "Test";
 import { CreateUsersWithListInputResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test();
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
 sdk.user.createUsersWithListInput([
   {
@@ -185,10 +201,14 @@ This can only be done by the logged in user.
 import { Test } from "Test";
 import { DeleteUserResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test();
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
 sdk.user.deleteUser({
-  username: "Keshaun32",
+  username: "Gertrude_Welch44",
 }).then((res: DeleteUserResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -219,10 +239,14 @@ Get user by user name
 import { Test } from "Test";
 import { GetUserByNameResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test();
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
 sdk.user.getUserByName({
-  username: "Lia.Cormier",
+  username: "Floy_Moore",
 }).then((res: GetUserByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -253,11 +277,15 @@ Logs user into the system
 import { Test } from "Test";
 import { LoginUserResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test();
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
 sdk.user.loginUser({
-  password: "natus",
-  username: "Gertrude_Welch44",
+  password: "quidem",
+  username: "Baby_Beier65",
 }).then((res: LoginUserResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -288,7 +316,11 @@ Logs out current logged in user session
 import { Test } from "Test";
 import { LogoutUserResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test();
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
 sdk.user.logoutUser().then((res: LogoutUserResponse) => {
   if (res.statusCode == 200) {
@@ -319,7 +351,11 @@ This can only be done by the logged in user.
 import { Test } from "Test";
 import { UpdateUserFormResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test();
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
 sdk.user.updateUserForm({
   user: {
@@ -332,7 +368,7 @@ sdk.user.updateUserForm({
     userStatus: 1,
     username: "theUser",
   },
-  username: "Floy_Moore",
+  username: "Marcos35",
 }).then((res: UpdateUserFormResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -363,7 +399,11 @@ This can only be done by the logged in user.
 import { Test } from "Test";
 import { UpdateUserJsonResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test();
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
 sdk.user.updateUserJson({
   user: {
@@ -376,7 +416,7 @@ sdk.user.updateUserJson({
     userStatus: 1,
     username: "theUser",
   },
-  username: "Maxie96",
+  username: "Braulio60",
 }).then((res: UpdateUserJsonResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -407,11 +447,15 @@ This can only be done by the logged in user.
 import { Test } from "Test";
 import { UpdateUserRawResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test();
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
 sdk.user.updateUserRaw({
-  requestBody: "est".encode(),
-  username: "Madaline21",
+  requestBody: "nemo".encode(),
+  username: "Era43",
 }).then((res: UpdateUserRawResponse) => {
   if (res.statusCode == 200) {
     // handle response

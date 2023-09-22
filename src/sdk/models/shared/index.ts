@@ -6,5 +6,6 @@ export * from "./apiresponse";
 export * from "./category";
 export * from "./order";
 export * from "./pet";
+export * from "./security";
 export * from "./tag";
 export * from "./user";

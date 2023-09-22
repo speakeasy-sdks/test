@@ -3,13 +3,14 @@
 
 ```typescript
 import { Test } from "Test";
-import { AddPetFormResponse, AddPetFormSecurity } from "Test/dist/sdk/models/operations";
+import { AddPetFormResponse } from "Test/dist/sdk/models/operations";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
-const sdk = new Test();
-const operationSecurity: AddPetFormSecurity = {
-  petstoreAuth: "",
-};
+const sdk = new Test({
+  security: {
+    petstoreAuth: "",
+  },
+});
 
 sdk.pet.addPetForm({
   category: {
@@ -28,7 +29,7 @@ sdk.pet.addPetForm({
       name: "Stuart Stiedemann",
     },
   ],
-}, operationSecurity).then((res: AddPetFormResponse) => {
+}).then((res: AddPetFormResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

@@ -80,7 +80,19 @@ export class User {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers: RawAxiosRequestHeaders = { ...reqBodyHeaders, ...config?.headers };
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
+        }
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (acceptHeaderOverride !== undefined) {
             headers["Accept"] = acceptHeaderOverride.toString();
         } else {
@@ -164,7 +176,19 @@ export class User {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers: RawAxiosRequestHeaders = { ...reqBodyHeaders, ...config?.headers };
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
+        }
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (acceptHeaderOverride !== undefined) {
             headers["Accept"] = acceptHeaderOverride.toString();
         } else {
@@ -244,7 +268,19 @@ export class User {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers: RawAxiosRequestHeaders = { ...reqBodyHeaders, ...config?.headers };
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
+        }
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (acceptHeaderOverride !== undefined) {
             headers["Accept"] = acceptHeaderOverride.toString();
         } else {
@@ -324,7 +360,19 @@ export class User {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers: RawAxiosRequestHeaders = { ...reqBodyHeaders, ...config?.headers };
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
+        }
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         if (acceptHeaderOverride !== undefined) {
             headers["Accept"] = acceptHeaderOverride.toString();
         } else {
@@ -400,7 +448,15 @@ export class User {
         );
         const url: string = utils.generateURL(baseURL, "/user/{username}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers: RawAxiosRequestHeaders = { ...config?.headers };
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
+        }
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -453,7 +509,15 @@ export class User {
         );
         const url: string = utils.generateURL(baseURL, "/user/{username}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers: RawAxiosRequestHeaders = { ...config?.headers };
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
+        }
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         if (acceptHeaderOverride !== undefined) {
             headers["Accept"] = acceptHeaderOverride.toString();
         } else {
@@ -525,7 +589,15 @@ export class User {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/user/login";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers: RawAxiosRequestHeaders = { ...config?.headers };
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
+        }
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         const queryParams: string = utils.serializeQueryParams(req);
         if (acceptHeaderOverride !== undefined) {
             headers["Accept"] = acceptHeaderOverride.toString();
@@ -591,7 +663,15 @@ export class User {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/user/logout";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers: RawAxiosRequestHeaders = { ...config?.headers };
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
+        }
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
+        const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -656,7 +736,19 @@ export class User {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers: RawAxiosRequestHeaders = { ...reqBodyHeaders, ...config?.headers };
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
+        }
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         headers["Accept"] = "*/*";
 
         headers[
@@ -722,7 +814,19 @@ export class User {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers: RawAxiosRequestHeaders = { ...reqBodyHeaders, ...config?.headers };
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
+        }
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         headers["Accept"] = "*/*";
 
         headers[
@@ -788,7 +892,19 @@ export class User {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers: RawAxiosRequestHeaders = { ...reqBodyHeaders, ...config?.headers };
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
+        }
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
+        const headers: RawAxiosRequestHeaders = {
+            ...reqBodyHeaders,
+            ...config?.headers,
+            ...properties.headers,
+        };
         headers["Accept"] = "*/*";
 
         headers[
