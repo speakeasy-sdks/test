@@ -58,7 +58,7 @@ sdk.pet.addPetForm({
 ## Available Resources and Operations
 
 
-### [Pet](docs/sdks/pet/README.md)
+### [pet](docs/sdks/pet/README.md)
 
 * [addPetForm](docs/sdks/pet/README.md#addpetform) - Add a new pet to the store
 * [addPetJson](docs/sdks/pet/README.md#addpetjson) - Add a new pet to the store
@@ -73,7 +73,7 @@ sdk.pet.addPetForm({
 * [updatePetRaw](docs/sdks/pet/README.md#updatepetraw) - Update an existing pet
 * [uploadFile](docs/sdks/pet/README.md#uploadfile) - uploads an image
 
-### [Store](docs/sdks/store/README.md)
+### [store](docs/sdks/store/README.md)
 
 * [deleteOrder](docs/sdks/store/README.md#deleteorder) - Delete purchase order by ID
 * [getInventory](docs/sdks/store/README.md#getinventory) - Returns pet inventories by status
@@ -82,7 +82,7 @@ sdk.pet.addPetForm({
 * [placeOrderJson](docs/sdks/store/README.md#placeorderjson) - Place an order for a pet
 * [placeOrderRaw](docs/sdks/store/README.md#placeorderraw) - Place an order for a pet
 
-### [User](docs/sdks/user/README.md)
+### [user](docs/sdks/user/README.md)
 
 * [createUserForm](docs/sdks/user/README.md#createuserform) - Create user
 * [createUserJson](docs/sdks/user/README.md#createuserjson) - Create user
