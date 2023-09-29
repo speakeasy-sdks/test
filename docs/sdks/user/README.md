@@ -125,7 +125,7 @@ const sdk = new Test({
   },
 });
 
-sdk.user.createUserRaw("natus".encode()).then((res: CreateUserRawResponse) => {
+sdk.user.createUserRaw("i5Xui)x^_Y" as bytes <<<>>>).then((res: CreateUserRawResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -209,7 +209,7 @@ const sdk = new Test({
 });
 
 sdk.user.deleteUser({
-  username: "Gertrude_Welch44",
+  username: "Demetris_Torphy",
 }).then((res: DeleteUserResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -247,7 +247,7 @@ const sdk = new Test({
 });
 
 sdk.user.getUserByName({
-  username: "Floy_Moore",
+  username: "Zachery_Schneider",
 }).then((res: GetUserByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -285,8 +285,8 @@ const sdk = new Test({
 });
 
 sdk.user.loginUser({
-  password: "quidem",
-  username: "Baby_Beier65",
+  password: "ksPrq3dzBQkU6Le",
+  username: "Edwin_Gleason",
 }).then((res: LoginUserResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -369,7 +369,7 @@ sdk.user.updateUserForm({
     userStatus: 1,
     username: "theUser",
   },
-  username: "Marcos35",
+  username: "Bo_Lynch4",
 }).then((res: UpdateUserFormResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -417,7 +417,7 @@ sdk.user.updateUserJson({
     userStatus: 1,
     username: "theUser",
   },
-  username: "Braulio60",
+  username: "Alanna_Waters81",
 }).then((res: UpdateUserJsonResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -455,8 +455,8 @@ const sdk = new Test({
 });
 
 sdk.user.updateUserRaw({
-  requestBody: "nemo".encode(),
-  username: "Era43",
+  requestBody: "b4q0<\{RD/" as bytes <<<>>>,
+  username: "Eleonore2",
 }).then((res: UpdateUserRawResponse) => {
   if (res.statusCode == 200) {
     // handle response

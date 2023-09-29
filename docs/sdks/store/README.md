@@ -33,7 +33,7 @@ const sdk = new Test({
 });
 
 sdk.store.deleteOrder({
-  orderId: 135218,
+  orderId: 127902,
 }).then((res: DeleteOrderResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -106,7 +106,7 @@ const sdk = new Test({
 });
 
 sdk.store.getOrderById({
-  orderId: 18789,
+  orderId: 614993,
 }).then((res: GetOrderByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -149,7 +149,7 @@ sdk.store.placeOrderForm({
   id: 10,
   petId: 198772,
   quantity: 7,
-  shipDate: new Date("2022-05-20T13:30:46.463Z"),
+  shipDate: new Date("2023-07-01T05:15:42.087Z"),
   status: OrderStatus.Approved,
 }).then((res: PlaceOrderFormResponse) => {
   if (res.statusCode == 200) {
@@ -193,7 +193,7 @@ sdk.store.placeOrderJson({
   id: 10,
   petId: 198772,
   quantity: 7,
-  shipDate: new Date("2022-05-22T14:02:28.908Z"),
+  shipDate: new Date("2021-04-28T14:07:22.796Z"),
   status: OrderStatus.Approved,
 }).then((res: PlaceOrderJsonResponse) => {
   if (res.statusCode == 200) {
@@ -232,7 +232,7 @@ const sdk = new Test({
   },
 });
 
-sdk.store.placeOrderRaw("dolor".encode()).then((res: PlaceOrderRawResponse) => {
+sdk.store.placeOrderRaw("UlJXn(4[x^" as bytes <<<>>>).then((res: PlaceOrderRawResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

@@ -37,13 +37,13 @@ sdk.pet.addPetForm({
   id: 10,
   name: "doggie",
   photoUrls: [
-    "vel",
+    "yellow",
   ],
-  status: PetStatus.Pending,
+  status: PetStatus.Sold,
   tags: [
     {
-      id: 645894,
-      name: "Willie Gulgowski DVM",
+      id: 837177,
+      name: "North Awesome",
     },
   ],
 }).then((res: AddPetFormResponse) => {

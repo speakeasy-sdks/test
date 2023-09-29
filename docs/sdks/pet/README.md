@@ -47,13 +47,13 @@ sdk.pet.addPetForm({
   id: 10,
   name: "doggie",
   photoUrls: [
-    "tempora",
+    "yellow",
   ],
-  status: PetStatus.Pending,
+  status: PetStatus.Sold,
   tags: [
     {
-      id: 477665,
-      name: "Irving Lehner",
+      id: 837177,
+      name: "North Awesome",
     },
   ],
 }).then((res: AddPetFormResponse) => {
@@ -101,13 +101,13 @@ sdk.pet.addPetJson({
   id: 10,
   name: "doggie",
   photoUrls: [
-    "nisi",
+    "male",
   ],
   status: PetStatus.Sold,
   tags: [
     {
-      id: 836079,
-      name: "Erica Bogisich III",
+      id: 122057,
+      name: "whiteboard Mobility Cis",
     },
   ],
 }).then((res: AddPetJsonResponse) => {
@@ -147,7 +147,7 @@ const sdk = new Test({
   },
 });
 
-sdk.pet.addPetRaw("repellendus".encode()).then((res: AddPetRawResponse) => {
+sdk.pet.addPetRaw("W`6wC8ntZ\" as bytes <<<>>>).then((res: AddPetRawResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -184,8 +184,8 @@ const sdk = new Test({
 });
 
 sdk.pet.deletePet({
-  apiKey: "sapiente",
-  petId: 778157,
+  apiKey: "Northwest female",
+  petId: 979259,
 }).then((res: DeletePetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -223,7 +223,7 @@ const sdk = new Test({
 });
 
 sdk.pet.findPetsByStatus({
-  status: FindPetsByStatusStatus.Available,
+  status: FindPetsByStatusStatus.Sold,
 }).then((res: FindPetsByStatusResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -262,7 +262,7 @@ const sdk = new Test({
 
 sdk.pet.findPetsByTags({
   tags: [
-    "at",
+    "engage",
   ],
 }).then((res: FindPetsByTagsResponse) => {
   if (res.statusCode == 200) {
@@ -300,7 +300,7 @@ const operationSecurity: GetPetByIdSecurity = {
 };
 
 sdk.pet.getPetById({
-  petId: 870088,
+  petId: 504151,
 }, operationSecurity).then((res: GetPetByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -339,9 +339,9 @@ const sdk = new Test({
 });
 
 sdk.pet.updatePetWithForm({
-  name: "Javier Schmidt",
-  petId: 520478,
-  status: "porro",
+  name: "XSS",
+  petId: 505104,
+  status: "Awesome",
 }).then((res: UpdatePetWithFormResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -387,13 +387,13 @@ sdk.pet.updatePetForm({
   id: 10,
   name: "doggie",
   photoUrls: [
-    "dolorum",
+    "Associate",
   ],
-  status: PetStatus.Available,
+  status: PetStatus.Pending,
   tags: [
     {
-      id: 720633,
-      name: "Seth Conroy",
+      id: 47695,
+      name: "azure Ringgit Analyst",
     },
   ],
 }).then((res: UpdatePetFormResponse) => {
@@ -441,13 +441,13 @@ sdk.pet.updatePetJson({
   id: 10,
   name: "doggie",
   photoUrls: [
-    "optio",
+    "engage",
   ],
   status: PetStatus.Pending,
   tags: [
     {
-      id: 105907,
-      name: "Tanya Gleason",
+      id: 474658,
+      name: "Wooden along",
     },
   ],
 }).then((res: UpdatePetJsonResponse) => {
@@ -487,7 +487,7 @@ const sdk = new Test({
   },
 });
 
-sdk.pet.updatePetRaw("cum".encode()).then((res: UpdatePetRawResponse) => {
+sdk.pet.updatePetRaw(":Pnf><u_<@" as bytes <<<>>>).then((res: UpdatePetRawResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -524,9 +524,9 @@ const sdk = new Test({
 });
 
 sdk.pet.uploadFile({
-  requestBody: "esse".encode(),
-  additionalMetadata: "ipsum",
-  petId: 568434,
+  requestBody: "U?WWKB{5@q" as bytes <<<>>>,
+  additionalMetadata: "through ew",
+  petId: 712651,
 }).then((res: UploadFileResponse) => {
   if (res.statusCode == 200) {
     // handle response
