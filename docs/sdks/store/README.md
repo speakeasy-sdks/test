@@ -24,21 +24,22 @@ For valid response try integer IDs with value < 1000. Anything above 1000 or non
 
 ```typescript
 import { Test } from "Test";
-import { DeleteOrderResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
+    },
+  });
 
-sdk.store.deleteOrder({
-  orderId: 127902,
-}).then((res: DeleteOrderResponse) => {
+  const res = await sdk.store.deleteOrder({
+    orderId: 127902,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -62,18 +63,20 @@ Returns a map of status codes to quantities
 
 ```typescript
 import { Test } from "Test";
-import { GetInventoryResponse, GetInventorySecurity } from "Test/dist/sdk/models/operations";
+import { GetInventorySecurity } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test();
+(async() => {
+  const sdk = new Test();
 const operationSecurity: GetInventorySecurity = {
   apiKey: "",
 };
 
-sdk.store.getInventory(operationSecurity).then((res: GetInventoryResponse) => {
+  const res = await sdk.store.getInventory(operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -97,21 +100,22 @@ For valid response try integer IDs with value <= 5 or > 10. Other values will ge
 
 ```typescript
 import { Test } from "Test";
-import { GetOrderByIdResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
+    },
+  });
 
-sdk.store.getOrderById({
-  orderId: 614993,
-}).then((res: GetOrderByIdResponse) => {
+  const res = await sdk.store.getOrderById({
+    orderId: 614993,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -135,27 +139,26 @@ Place a new order in the store
 
 ```typescript
 import { Test } from "Test";
-import { PlaceOrderFormResponse } from "Test/dist/sdk/models/operations";
 import { OrderStatus } from "Test/dist/sdk/models/shared";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
+    },
+  });
 
-sdk.store.placeOrderForm({
-  complete: false,
-  id: 10,
-  petId: 198772,
-  quantity: 7,
-  shipDate: new Date("2023-07-01T05:15:42.087Z"),
-  status: OrderStatus.Approved,
-}).then((res: PlaceOrderFormResponse) => {
+  const res = await sdk.store.placeOrderForm({
+    id: 10,
+    petId: 198772,
+    quantity: 7,
+    status: OrderStatus.Approved,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -179,27 +182,26 @@ Place a new order in the store
 
 ```typescript
 import { Test } from "Test";
-import { PlaceOrderJsonResponse } from "Test/dist/sdk/models/operations";
 import { OrderStatus } from "Test/dist/sdk/models/shared";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
+    },
+  });
 
-sdk.store.placeOrderJson({
-  complete: false,
-  id: 10,
-  petId: 198772,
-  quantity: 7,
-  shipDate: new Date("2021-04-28T14:07:22.796Z"),
-  status: OrderStatus.Approved,
-}).then((res: PlaceOrderJsonResponse) => {
+  const res = await sdk.store.placeOrderJson({
+    id: 10,
+    petId: 198772,
+    quantity: 7,
+    status: OrderStatus.Approved,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -223,20 +225,21 @@ Place a new order in the store
 
 ```typescript
 import { Test } from "Test";
-import { PlaceOrderRawResponse } from "Test/dist/sdk/models/operations";
 import { OrderStatus } from "Test/dist/sdk/models/shared";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
+    },
+  });
 
-sdk.store.placeOrderRaw("UlJXn(4[x^" as bytes <<<>>>).then((res: PlaceOrderRawResponse) => {
+  const res = await sdk.store.placeOrderRaw("UlJXn(4[x^" as bytes <<<>>>);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

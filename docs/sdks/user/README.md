@@ -27,28 +27,29 @@ This can only be done by the logged in user.
 
 ```typescript
 import { Test } from "Test";
-import { CreateUserFormResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
+    },
+  });
 
-sdk.user.createUserForm({
-  email: "john@email.com",
-  firstName: "John",
-  id: 10,
-  lastName: "James",
-  password: "12345",
-  phone: "12345",
-  userStatus: 1,
-  username: "theUser",
-}).then((res: CreateUserFormResponse) => {
+  const res = await sdk.user.createUserForm({
+    email: "john@email.com",
+    firstName: "John",
+    id: 10,
+    lastName: "James",
+    password: "12345",
+    phone: "12345",
+    userStatus: 1,
+    username: "theUser",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -72,28 +73,29 @@ This can only be done by the logged in user.
 
 ```typescript
 import { Test } from "Test";
-import { CreateUserJsonResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
+    },
+  });
 
-sdk.user.createUserJson({
-  email: "john@email.com",
-  firstName: "John",
-  id: 10,
-  lastName: "James",
-  password: "12345",
-  phone: "12345",
-  userStatus: 1,
-  username: "theUser",
-}).then((res: CreateUserJsonResponse) => {
+  const res = await sdk.user.createUserJson({
+    email: "john@email.com",
+    firstName: "John",
+    id: 10,
+    lastName: "James",
+    password: "12345",
+    phone: "12345",
+    userStatus: 1,
+    username: "theUser",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -117,19 +119,20 @@ This can only be done by the logged in user.
 
 ```typescript
 import { Test } from "Test";
-import { CreateUserRawResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
+    },
+  });
 
-sdk.user.createUserRaw("i5Xui)x^_Y" as bytes <<<>>>).then((res: CreateUserRawResponse) => {
+  const res = await sdk.user.createUserRaw("i5Xui)x^_Y" as bytes <<<>>>);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -153,30 +156,31 @@ Creates list of users with given input array
 
 ```typescript
 import { Test } from "Test";
-import { CreateUsersWithListInputResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
+    },
+  });
 
-sdk.user.createUsersWithListInput([
-  {
-    email: "john@email.com",
-    firstName: "John",
-    id: 10,
-    lastName: "James",
-    password: "12345",
-    phone: "12345",
-    userStatus: 1,
-    username: "theUser",
-  },
-]).then((res: CreateUsersWithListInputResponse) => {
+  const res = await sdk.user.createUsersWithListInput([
+    {
+      email: "john@email.com",
+      firstName: "John",
+      id: 10,
+      lastName: "James",
+      password: "12345",
+      phone: "12345",
+      userStatus: 1,
+      username: "theUser",
+    },
+  ]);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -200,21 +204,22 @@ This can only be done by the logged in user.
 
 ```typescript
 import { Test } from "Test";
-import { DeleteUserResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
+    },
+  });
 
-sdk.user.deleteUser({
-  username: "Demetris_Torphy",
-}).then((res: DeleteUserResponse) => {
+  const res = await sdk.user.deleteUser({
+    username: "Demetris_Torphy",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -238,21 +243,22 @@ Get user by user name
 
 ```typescript
 import { Test } from "Test";
-import { GetUserByNameResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
+    },
+  });
 
-sdk.user.getUserByName({
-  username: "Zachery_Schneider",
-}).then((res: GetUserByNameResponse) => {
+  const res = await sdk.user.getUserByName({
+    username: "Zachery_Schneider",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -276,22 +282,20 @@ Logs user into the system
 
 ```typescript
 import { Test } from "Test";
-import { LoginUserResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
+    },
+  });
 
-sdk.user.loginUser({
-  password: "ksPrq3dzBQkU6Le",
-  username: "Edwin_Gleason",
-}).then((res: LoginUserResponse) => {
+  const res = await sdk.user.loginUser({});
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -315,19 +319,20 @@ Logs out current logged in user session
 
 ```typescript
 import { Test } from "Test";
-import { LogoutUserResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
+    },
+  });
 
-sdk.user.logoutUser().then((res: LogoutUserResponse) => {
+  const res = await sdk.user.logoutUser();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -350,31 +355,32 @@ This can only be done by the logged in user.
 
 ```typescript
 import { Test } from "Test";
-import { UpdateUserFormResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
+    },
+  });
 
-sdk.user.updateUserForm({
-  user: {
-    email: "john@email.com",
-    firstName: "John",
-    id: 10,
-    lastName: "James",
-    password: "12345",
-    phone: "12345",
-    userStatus: 1,
-    username: "theUser",
-  },
-  username: "Bo_Lynch4",
-}).then((res: UpdateUserFormResponse) => {
+  const res = await sdk.user.updateUserForm({
+    user: {
+      email: "john@email.com",
+      firstName: "John",
+      id: 10,
+      lastName: "James",
+      password: "12345",
+      phone: "12345",
+      userStatus: 1,
+      username: "theUser",
+    },
+    username: "Bo_Lynch4",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -398,31 +404,32 @@ This can only be done by the logged in user.
 
 ```typescript
 import { Test } from "Test";
-import { UpdateUserJsonResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
+    },
+  });
 
-sdk.user.updateUserJson({
-  user: {
-    email: "john@email.com",
-    firstName: "John",
-    id: 10,
-    lastName: "James",
-    password: "12345",
-    phone: "12345",
-    userStatus: 1,
-    username: "theUser",
-  },
-  username: "Alanna_Waters81",
-}).then((res: UpdateUserJsonResponse) => {
+  const res = await sdk.user.updateUserJson({
+    user: {
+      email: "john@email.com",
+      firstName: "John",
+      id: 10,
+      lastName: "James",
+      password: "12345",
+      phone: "12345",
+      userStatus: 1,
+      username: "theUser",
+    },
+    username: "Alanna_Waters81",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -446,22 +453,23 @@ This can only be done by the logged in user.
 
 ```typescript
 import { Test } from "Test";
-import { UpdateUserRawResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
+    },
+  });
 
-sdk.user.updateUserRaw({
-  requestBody: "b4q0<\{RD/" as bytes <<<>>>,
-  username: "Eleonore2",
-}).then((res: UpdateUserRawResponse) => {
+  const res = await sdk.user.updateUserRaw({
+    requestBody: "b4q0<\{RD/" as bytes <<<>>>,
+    username: "Eleonore2",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

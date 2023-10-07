@@ -30,37 +30,34 @@ Add a new pet to the store
 
 ```typescript
 import { Test } from "Test";
-import { AddPetFormResponse } from "Test/dist/sdk/models/operations";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
-
-sdk.pet.addPetForm({
-  category: {
-    id: 1,
-    name: "Dogs",
-  },
-  id: 10,
-  name: "doggie",
-  photoUrls: [
-    "yellow",
-  ],
-  status: PetStatus.Sold,
-  tags: [
-    {
-      id: 837177,
-      name: "North Awesome",
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
     },
-  ],
-}).then((res: AddPetFormResponse) => {
+  });
+
+  const res = await sdk.pet.addPetForm({
+    category: {
+      id: 1,
+      name: "Dogs",
+    },
+    id: 10,
+    name: "doggie",
+    photoUrls: [
+      "yellow",
+    ],
+    tags: [
+      {},
+    ],
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -84,37 +81,34 @@ Add a new pet to the store
 
 ```typescript
 import { Test } from "Test";
-import { AddPetJsonResponse } from "Test/dist/sdk/models/operations";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
-
-sdk.pet.addPetJson({
-  category: {
-    id: 1,
-    name: "Dogs",
-  },
-  id: 10,
-  name: "doggie",
-  photoUrls: [
-    "male",
-  ],
-  status: PetStatus.Sold,
-  tags: [
-    {
-      id: 122057,
-      name: "whiteboard Mobility Cis",
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
     },
-  ],
-}).then((res: AddPetJsonResponse) => {
+  });
+
+  const res = await sdk.pet.addPetJson({
+    category: {
+      id: 1,
+      name: "Dogs",
+    },
+    id: 10,
+    name: "doggie",
+    photoUrls: [
+      "male",
+    ],
+    tags: [
+      {},
+    ],
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -138,20 +132,21 @@ Add a new pet to the store
 
 ```typescript
 import { Test } from "Test";
-import { AddPetRawResponse } from "Test/dist/sdk/models/operations";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
+    },
+  });
 
-sdk.pet.addPetRaw("W`6wC8ntZ\" as bytes <<<>>>).then((res: AddPetRawResponse) => {
+  const res = await sdk.pet.addPetRaw("W`6wC8ntZ\" as bytes <<<>>>);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -175,22 +170,22 @@ Deletes a pet
 
 ```typescript
 import { Test } from "Test";
-import { DeletePetResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
+    },
+  });
 
-sdk.pet.deletePet({
-  apiKey: "Northwest female",
-  petId: 979259,
-}).then((res: DeletePetResponse) => {
+  const res = await sdk.pet.deletePet({
+    petId: 441876,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -214,21 +209,21 @@ Multiple status values can be provided with comma separated strings
 
 ```typescript
 import { Test } from "Test";
-import { FindPetsByStatusResponse, FindPetsByStatusStatus } from "Test/dist/sdk/models/operations";
+import { FindPetsByStatusStatus } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
+    },
+  });
 
-sdk.pet.findPetsByStatus({
-  status: FindPetsByStatusStatus.Sold,
-}).then((res: FindPetsByStatusResponse) => {
+  const res = await sdk.pet.findPetsByStatus({});
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -252,23 +247,24 @@ Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3
 
 ```typescript
 import { Test } from "Test";
-import { FindPetsByTagsResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
+    },
+  });
 
-sdk.pet.findPetsByTags({
-  tags: [
-    "engage",
-  ],
-}).then((res: FindPetsByTagsResponse) => {
+  const res = await sdk.pet.findPetsByTags({
+    tags: [
+      "engage",
+    ],
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -292,20 +288,22 @@ Returns a single pet
 
 ```typescript
 import { Test } from "Test";
-import { GetPetByIdResponse, GetPetByIdSecurity } from "Test/dist/sdk/models/operations";
+import { GetPetByIdSecurity } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test();
+(async() => {
+  const sdk = new Test();
 const operationSecurity: GetPetByIdSecurity = {
   apiKey: "",
 };
 
-sdk.pet.getPetById({
-  petId: 504151,
-}, operationSecurity).then((res: GetPetByIdResponse) => {
+  const res = await sdk.pet.getPetById({
+    petId: 504151,
+  }, operationSecurity);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -330,23 +328,22 @@ Updates a pet in the store with form data
 
 ```typescript
 import { Test } from "Test";
-import { UpdatePetWithFormResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
+    },
+  });
 
-sdk.pet.updatePetWithForm({
-  name: "XSS",
-  petId: 505104,
-  status: "Awesome",
-}).then((res: UpdatePetWithFormResponse) => {
+  const res = await sdk.pet.updatePetWithForm({
+    petId: 303241,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -370,37 +367,34 @@ Update an existing pet by Id
 
 ```typescript
 import { Test } from "Test";
-import { UpdatePetFormResponse } from "Test/dist/sdk/models/operations";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
-
-sdk.pet.updatePetForm({
-  category: {
-    id: 1,
-    name: "Dogs",
-  },
-  id: 10,
-  name: "doggie",
-  photoUrls: [
-    "Associate",
-  ],
-  status: PetStatus.Pending,
-  tags: [
-    {
-      id: 47695,
-      name: "azure Ringgit Analyst",
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
     },
-  ],
-}).then((res: UpdatePetFormResponse) => {
+  });
+
+  const res = await sdk.pet.updatePetForm({
+    category: {
+      id: 1,
+      name: "Dogs",
+    },
+    id: 10,
+    name: "doggie",
+    photoUrls: [
+      "Associate",
+    ],
+    tags: [
+      {},
+    ],
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -424,37 +418,34 @@ Update an existing pet by Id
 
 ```typescript
 import { Test } from "Test";
-import { UpdatePetJsonResponse } from "Test/dist/sdk/models/operations";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
-
-sdk.pet.updatePetJson({
-  category: {
-    id: 1,
-    name: "Dogs",
-  },
-  id: 10,
-  name: "doggie",
-  photoUrls: [
-    "engage",
-  ],
-  status: PetStatus.Pending,
-  tags: [
-    {
-      id: 474658,
-      name: "Wooden along",
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
     },
-  ],
-}).then((res: UpdatePetJsonResponse) => {
+  });
+
+  const res = await sdk.pet.updatePetJson({
+    category: {
+      id: 1,
+      name: "Dogs",
+    },
+    id: 10,
+    name: "doggie",
+    photoUrls: [
+      "engage",
+    ],
+    tags: [
+      {},
+    ],
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -478,20 +469,21 @@ Update an existing pet by Id
 
 ```typescript
 import { Test } from "Test";
-import { UpdatePetRawResponse } from "Test/dist/sdk/models/operations";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
+    },
+  });
 
-sdk.pet.updatePetRaw(":Pnf><u_<@" as bytes <<<>>>).then((res: UpdatePetRawResponse) => {
+  const res = await sdk.pet.updatePetRaw(":Pnf><u_<@" as bytes <<<>>>);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -515,23 +507,23 @@ uploads an image
 
 ```typescript
 import { Test } from "Test";
-import { UploadFileResponse } from "Test/dist/sdk/models/operations";
 
-const sdk = new Test({
-  security: {
-    petstoreAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Test({
+    security: {
+      petstoreAuth: "",
+    },
+  });
 
-sdk.pet.uploadFile({
-  requestBody: "U?WWKB{5@q" as bytes <<<>>>,
-  additionalMetadata: "through ew",
-  petId: 712651,
-}).then((res: UploadFileResponse) => {
+  const res = await sdk.pet.uploadFile({
+    requestBody: "U?WWKB{5@q" as bytes <<<>>>,
+    petId: 621158,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
