@@ -2,26 +2,29 @@ configVersion: 1.0.0
 management:
   docChecksum: 8288fd395d61164b2aa55a65c51cce27
   docVersion: 1.0.17
-  speakeasyVersion: 1.96.1
-  generationVersion: 2.150.0
+  speakeasyVersion: 1.104.0
+  generationVersion: 2.169.0
 generation:
   comments:
     disableComments: false
     omitDescriptionIfSummaryPresent: false
   baseServerURL: ""
+  repoURL: https://github.com/speakeasy-sdks/test.git
   sdkClassName: Test
   singleTagPerOp: false
   tagNamespacingDisabled: false
 features:
   typescript:
     acceptHeaders: 2.81.1
-    core: 2.90.4
+    core: 2.93.0
     globalSecurity: 2.82.0
     globalServerURLs: 2.82.0
     methodSecurity: 2.82.0
 typescript:
-  version: 1.23.0
+  version: 1.24.0
   author: Dom
   flattenGlobalSecurity: false
+  installationURL: https://github.com/speakeasy-sdks/test
   maxMethodParams: 0
   packageName: Test
+  repoSubDirectory: .

@@ -47,7 +47,7 @@ import { PetStatus } from "Test/dist/sdk/models/shared";
     id: 10,
     name: "doggie",
     photoUrls: [
-      "yellow",
+      "string",
     ],
     tags: [
       {},
@@ -98,7 +98,7 @@ import { PetStatus } from "Test/dist/sdk/models/shared";
     id: 10,
     name: "doggie",
     photoUrls: [
-      "male",
+      "string",
     ],
     tags: [
       {},
@@ -257,7 +257,7 @@ import { Test } from "Test";
 
   const res = await sdk.pet.findPetsByTags({
     tags: [
-      "engage",
+      "string",
     ],
   });
 
@@ -384,7 +384,7 @@ import { PetStatus } from "Test/dist/sdk/models/shared";
     id: 10,
     name: "doggie",
     photoUrls: [
-      "Associate",
+      "string",
     ],
     tags: [
       {},
@@ -435,7 +435,7 @@ import { PetStatus } from "Test/dist/sdk/models/shared";
     id: 10,
     name: "doggie",
     photoUrls: [
-      "engage",
+      "string",
     ],
     tags: [
       {},
