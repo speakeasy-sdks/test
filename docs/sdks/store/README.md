@@ -1,5 +1,5 @@
 # Store
-(*store*)
+(*.store*)
 
 ## Overview
 
@@ -35,6 +35,7 @@ import { Test } from "Test";
   const res = await sdk.store.deleteOrder({
     orderId: 127902,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -72,6 +73,7 @@ const operationSecurity: GetInventorySecurity = {
 };
 
   const res = await sdk.store.getInventory(operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -112,6 +114,7 @@ import { Test } from "Test";
     orderId: 614993,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -139,7 +142,7 @@ Place a new order in the store
 
 ```typescript
 import { Test } from "Test";
-import { OrderStatus } from "Test/dist/sdk/models/shared";
+import { Status } from "Test/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Test({
@@ -152,8 +155,9 @@ import { OrderStatus } from "Test/dist/sdk/models/shared";
     id: 10,
     petId: 198772,
     quantity: 7,
-    status: OrderStatus.Approved,
+    status: Status.Approved,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -182,7 +186,7 @@ Place a new order in the store
 
 ```typescript
 import { Test } from "Test";
-import { OrderStatus } from "Test/dist/sdk/models/shared";
+import { Status } from "Test/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Test({
@@ -195,8 +199,9 @@ import { OrderStatus } from "Test/dist/sdk/models/shared";
     id: 10,
     petId: 198772,
     quantity: 7,
-    status: OrderStatus.Approved,
+    status: Status.Approved,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -225,7 +230,7 @@ Place a new order in the store
 
 ```typescript
 import { Test } from "Test";
-import { OrderStatus } from "Test/dist/sdk/models/shared";
+import { Status } from "Test/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Test({
@@ -234,7 +239,8 @@ import { OrderStatus } from "Test/dist/sdk/models/shared";
     },
   });
 
-  const res = await sdk.store.placeOrderRaw("UlJXn(4[x^" as bytes <<<>>>);
+  const res = await sdk.store.placeOrderRaw(new TextEncoder().encode("0xcB9dC14dEe"));
+
 
   if (res.statusCode == 200) {
     // handle response

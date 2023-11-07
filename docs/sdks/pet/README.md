@@ -1,5 +1,5 @@
 # Pet
-(*pet*)
+(*.pet*)
 
 ## Overview
 
@@ -54,6 +54,7 @@ import { PetStatus } from "Test/dist/sdk/models/shared";
     ],
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -105,6 +106,7 @@ import { PetStatus } from "Test/dist/sdk/models/shared";
     ],
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -141,7 +143,8 @@ import { PetStatus } from "Test/dist/sdk/models/shared";
     },
   });
 
-  const res = await sdk.pet.addPetRaw("W`6wC8ntZ\" as bytes <<<>>>);
+  const res = await sdk.pet.addPetRaw(new TextEncoder().encode("0xcf5E85CDde"));
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -182,6 +185,7 @@ import { Test } from "Test";
     petId: 441876,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -209,7 +213,7 @@ Multiple status values can be provided with comma separated strings
 
 ```typescript
 import { Test } from "Test";
-import { FindPetsByStatusStatus } from "Test/dist/sdk/models/operations";
+import { Status } from "Test/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Test({
@@ -219,6 +223,7 @@ import { FindPetsByStatusStatus } from "Test/dist/sdk/models/operations";
   });
 
   const res = await sdk.pet.findPetsByStatus({});
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -261,6 +266,7 @@ import { Test } from "Test";
     ],
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -299,6 +305,7 @@ const operationSecurity: GetPetByIdSecurity = {
   const res = await sdk.pet.getPetById({
     petId: 504151,
   }, operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -339,6 +346,7 @@ import { Test } from "Test";
   const res = await sdk.pet.updatePetWithForm({
     petId: 303241,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -391,6 +399,7 @@ import { PetStatus } from "Test/dist/sdk/models/shared";
     ],
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -442,6 +451,7 @@ import { PetStatus } from "Test/dist/sdk/models/shared";
     ],
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -478,7 +488,8 @@ import { PetStatus } from "Test/dist/sdk/models/shared";
     },
   });
 
-  const res = await sdk.pet.updatePetRaw(":Pnf><u_<@" as bytes <<<>>>);
+  const res = await sdk.pet.updatePetRaw(new TextEncoder().encode("0x6bCA76De67"));
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -516,9 +527,10 @@ import { Test } from "Test";
   });
 
   const res = await sdk.pet.uploadFile({
-    requestBody: "U?WWKB{5@q" as bytes <<<>>>,
+    requestBody: new TextEncoder().encode("0xc7cca7F47D"),
     petId: 621158,
   });
+
 
   if (res.statusCode == 200) {
     // handle response

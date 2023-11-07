@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
  * Status values that need to be considered for filter
  */
-export enum FindPetsByStatusStatus {
+export enum Status {
     Available = "available",
     Pending = "pending",
     Sold = "sold",
@@ -20,10 +20,16 @@ export class FindPetsByStatusRequest extends SpeakeasyBase {
      * Status values that need to be considered for filter
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=status" })
-    status?: FindPetsByStatusStatus;
+    status?: Status;
 }
 
 export class FindPetsByStatusResponse extends SpeakeasyBase {
+    /**
+     * successful operation
+     */
+    @SpeakeasyMetadata({ elemType: shared.Pet })
+    twoHundredApplicationJsonClasses?: shared.Pet[];
+
     @SpeakeasyMetadata()
     body?: Uint8Array;
 
@@ -32,12 +38,6 @@ export class FindPetsByStatusResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     contentType: string;
-
-    /**
-     * successful operation
-     */
-    @SpeakeasyMetadata({ elemType: shared.Pet })
-    pets?: shared.Pet[];
 
     /**
      * HTTP response status code for this operation

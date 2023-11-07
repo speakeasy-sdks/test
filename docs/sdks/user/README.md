@@ -1,5 +1,5 @@
 # User
-(*user*)
+(*.user*)
 
 ## Overview
 
@@ -45,6 +45,7 @@ import { Test } from "Test";
     userStatus: 1,
     username: "theUser",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -92,6 +93,7 @@ import { Test } from "Test";
     username: "theUser",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -127,7 +129,8 @@ import { Test } from "Test";
     },
   });
 
-  const res = await sdk.user.createUserRaw("i5Xui)x^_Y" as bytes <<<>>>);
+  const res = await sdk.user.createUserRaw(new TextEncoder().encode("0xB4dDB1Eeed"));
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -177,6 +180,7 @@ import { Test } from "Test";
     },
   ]);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -215,6 +219,7 @@ import { Test } from "Test";
   const res = await sdk.user.deleteUser({
     username: "Demetris_Torphy",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -255,6 +260,7 @@ import { Test } from "Test";
     username: "Zachery_Schneider",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -292,6 +298,7 @@ import { Test } from "Test";
 
   const res = await sdk.user.loginUser({});
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -328,6 +335,7 @@ import { Test } from "Test";
   });
 
   const res = await sdk.user.logoutUser();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -376,6 +384,7 @@ import { Test } from "Test";
     },
     username: "Bo_Lynch4",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -426,6 +435,7 @@ import { Test } from "Test";
     username: "Alanna_Waters81",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -462,9 +472,10 @@ import { Test } from "Test";
   });
 
   const res = await sdk.user.updateUserRaw({
-    requestBody: "b4q0<\{RD/" as bytes <<<>>>,
+    requestBody: new TextEncoder().encode("0xf4D36eFb83"),
     username: "Eleonore2",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
