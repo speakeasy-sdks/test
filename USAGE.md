@@ -1,6 +1,4 @@
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { Test } from "Test";
 import { PetStatus } from "Test/dist/sdk/models/shared";
