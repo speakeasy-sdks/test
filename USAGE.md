@@ -1,12 +1,12 @@
-<!-- Start SDK Example Usage -->
+<!-- Start SDK Example Usage [usage] -->
 ```typescript
 import { Test } from "Test";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
-(async () => {
+async function run() {
     const sdk = new Test({
         security: {
-            petstoreAuth: "",
+            petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
         },
     });
 
@@ -24,7 +24,9 @@ import { PetStatus } from "Test/dist/sdk/models/shared";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->

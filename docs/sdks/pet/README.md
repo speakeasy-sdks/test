@@ -32,10 +32,10 @@ Add a new pet to the store
 import { Test } from "Test";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -57,7 +57,9 @@ import { PetStatus } from "Test/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -87,10 +89,10 @@ Add a new pet to the store
 import { Test } from "Test";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -112,7 +114,9 @@ import { PetStatus } from "Test/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -142,10 +146,10 @@ Add a new pet to the store
 import { Test } from "Test";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -154,7 +158,9 @@ import { PetStatus } from "Test/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -183,10 +189,10 @@ Deletes a pet
 ```typescript
 import { Test } from "Test";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -197,7 +203,9 @@ import { Test } from "Test";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -227,10 +235,10 @@ Multiple status values can be provided with comma separated strings
 import { Test } from "Test";
 import { Status } from "Test/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -239,7 +247,9 @@ import { Status } from "Test/dist/sdk/models/operations";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -268,10 +278,10 @@ Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3
 ```typescript
 import { Test } from "Test";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -284,7 +294,9 @@ import { Test } from "Test";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -314,10 +326,10 @@ Returns a single pet
 import { Test } from "Test";
 import { GetPetByIdSecurity } from "Test/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Test();
 const operationSecurity: GetPetByIdSecurity = {
-  apiKey: "",
+  apiKey: "<YOUR_API_KEY_HERE>",
 };
 
   const res = await sdk.pet.getPetById({
@@ -327,7 +339,9 @@ const operationSecurity: GetPetByIdSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -357,10 +371,10 @@ Updates a pet in the store with form data
 ```typescript
 import { Test } from "Test";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -371,7 +385,9 @@ import { Test } from "Test";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -401,10 +417,10 @@ Update an existing pet by Id
 import { Test } from "Test";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -426,7 +442,9 @@ import { PetStatus } from "Test/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -456,10 +474,10 @@ Update an existing pet by Id
 import { Test } from "Test";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -481,7 +499,9 @@ import { PetStatus } from "Test/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -511,10 +531,10 @@ Update an existing pet by Id
 import { Test } from "Test";
 import { PetStatus } from "Test/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -523,7 +543,9 @@ import { PetStatus } from "Test/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -552,10 +574,10 @@ uploads an image
 ```typescript
 import { Test } from "Test";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -567,7 +589,9 @@ import { Test } from "Test";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

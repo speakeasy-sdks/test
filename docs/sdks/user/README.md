@@ -28,10 +28,10 @@ This can only be done by the logged in user.
 ```typescript
 import { Test } from "Test";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -49,7 +49,9 @@ import { Test } from "Test";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -78,10 +80,10 @@ This can only be done by the logged in user.
 ```typescript
 import { Test } from "Test";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -99,7 +101,9 @@ import { Test } from "Test";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -128,10 +132,10 @@ This can only be done by the logged in user.
 ```typescript
 import { Test } from "Test";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -140,7 +144,9 @@ import { Test } from "Test";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -169,10 +175,10 @@ Creates list of users with given input array
 ```typescript
 import { Test } from "Test";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -192,7 +198,9 @@ import { Test } from "Test";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -221,10 +229,10 @@ This can only be done by the logged in user.
 ```typescript
 import { Test } from "Test";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -235,7 +243,9 @@ import { Test } from "Test";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -264,10 +274,10 @@ Get user by user name
 ```typescript
 import { Test } from "Test";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -278,7 +288,9 @@ import { Test } from "Test";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -307,10 +319,10 @@ Logs user into the system
 ```typescript
 import { Test } from "Test";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -319,7 +331,9 @@ import { Test } from "Test";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -348,10 +362,10 @@ Logs out current logged in user session
 ```typescript
 import { Test } from "Test";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -360,7 +374,9 @@ import { Test } from "Test";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -388,10 +404,10 @@ This can only be done by the logged in user.
 ```typescript
 import { Test } from "Test";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -412,7 +428,9 @@ import { Test } from "Test";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -441,10 +459,10 @@ This can only be done by the logged in user.
 ```typescript
 import { Test } from "Test";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -465,7 +483,9 @@ import { Test } from "Test";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -494,10 +514,10 @@ This can only be done by the logged in user.
 ```typescript
 import { Test } from "Test";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -509,7 +529,9 @@ import { Test } from "Test";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

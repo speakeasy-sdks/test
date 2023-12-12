@@ -25,10 +25,10 @@ For valid response try integer IDs with value < 1000. Anything above 1000 or non
 ```typescript
 import { Test } from "Test";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -39,7 +39,9 @@ import { Test } from "Test";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -69,10 +71,10 @@ Returns a map of status codes to quantities
 import { Test } from "Test";
 import { GetInventorySecurity } from "Test/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Test();
 const operationSecurity: GetInventorySecurity = {
-  apiKey: "",
+  apiKey: "<YOUR_API_KEY_HERE>",
 };
 
   const res = await sdk.store.getInventory(operationSecurity);
@@ -80,7 +82,9 @@ const operationSecurity: GetInventorySecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -109,10 +113,10 @@ For valid response try integer IDs with value <= 5 or > 10. Other values will ge
 ```typescript
 import { Test } from "Test";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -123,7 +127,9 @@ import { Test } from "Test";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -153,10 +159,10 @@ Place a new order in the store
 import { Test } from "Test";
 import { Status } from "Test/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -170,7 +176,9 @@ import { Status } from "Test/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -200,10 +208,10 @@ Place a new order in the store
 import { Test } from "Test";
 import { Status } from "Test/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -217,7 +225,9 @@ import { Status } from "Test/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -247,10 +257,10 @@ Place a new order in the store
 import { Test } from "Test";
 import { Status } from "Test/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "",
+      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     },
   });
 
@@ -259,7 +269,9 @@ import { Status } from "Test/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
