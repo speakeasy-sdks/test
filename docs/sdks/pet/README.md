@@ -47,7 +47,7 @@ async function run() {
     id: 10,
     name: "doggie",
     photoUrls: [
-      "string",
+      "<value>",
     ],
     tags: [
       {},
@@ -104,7 +104,7 @@ async function run() {
     id: 10,
     name: "doggie",
     photoUrls: [
-      "string",
+      "<value>",
     ],
     tags: [
       {},
@@ -287,7 +287,7 @@ async function run() {
 
   const res = await sdk.pet.findPetsByTags({
     tags: [
-      "string",
+      "<value>",
     ],
   });
 
@@ -432,7 +432,7 @@ async function run() {
     id: 10,
     name: "doggie",
     photoUrls: [
-      "string",
+      "<value>",
     ],
     tags: [
       {},
@@ -489,7 +489,7 @@ async function run() {
     id: 10,
     name: "doggie",
     photoUrls: [
-      "string",
+      "<value>",
     ],
     tags: [
       {},

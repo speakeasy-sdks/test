@@ -39,7 +39,7 @@ async function run() {
         },
         id: 10,
         name: "doggie",
-        photoUrls: ["string"],
+        photoUrls: ["<value>"],
         tags: [{}],
     });
 
@@ -132,7 +132,7 @@ async function run() {
             },
             id: 10,
             name: "doggie",
-            photoUrls: ["string"],
+            photoUrls: ["<value>"],
             tags: [{}],
         });
     } catch (err) {
@@ -186,7 +186,7 @@ async function run() {
         },
         id: 10,
         name: "doggie",
-        photoUrls: ["string"],
+        photoUrls: ["<value>"],
         tags: [{}],
     });
 
@@ -222,7 +222,7 @@ async function run() {
         },
         id: 10,
         name: "doggie",
-        photoUrls: ["string"],
+        photoUrls: ["<value>"],
         tags: [{}],
     });
 
@@ -289,7 +289,7 @@ async function run() {
         },
         id: 10,
         name: "doggie",
-        photoUrls: ["string"],
+        photoUrls: ["<value>"],
         tags: [{}],
     });
 

@@ -17,7 +17,7 @@ async function run() {
         },
         id: 10,
         name: "doggie",
-        photoUrls: ["string"],
+        photoUrls: ["<value>"],
         tags: [{}],
     });
 
