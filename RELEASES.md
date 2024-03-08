@@ -353,3 +353,11 @@ Based on:
 - Speakeasy CLI 1.180.0 (2.258.0) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [typescript v2.1.2] .
+
+## 2024-03-08 00:22:52
+### Changes
+Based on:
+- OpenAPI Doc 1.0.17 
+- Speakeasy CLI 1.204.1 (2.279.1) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [typescript v2.1.3] .
