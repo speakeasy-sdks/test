@@ -3,9 +3,9 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { Expose } from "class-transformer";
+import { Expose, Type } from "class-transformer";
 
-export class Category extends SpeakeasyBase {
+export class Id extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -13,4 +13,26 @@ export class Category extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "name" })
     name?: string;
+}
+
+export class Name extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class Category extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    @Type(() => Id)
+    id?: Id;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    @Type(() => Name)
+    name?: Name;
 }

@@ -3,35 +3,35 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { Expose, Transform } from "class-transformer";
+import { Expose, Transform, Type } from "class-transformer";
 
 /**
  * Order Status
  */
-export enum Status {
+export enum OrderSchemasCompleteStatus {
     Placed = "placed",
     Approved = "approved",
     Delivered = "delivered",
 }
 
-export class Order extends SpeakeasyBase {
-    @SpeakeasyMetadata({ data: "form, name=complete" })
+export class Complete extends SpeakeasyBase {
+    @SpeakeasyMetadata()
     @Expose({ name: "complete" })
     complete?: boolean;
 
-    @SpeakeasyMetadata({ data: "form, name=id" })
+    @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
 
-    @SpeakeasyMetadata({ data: "form, name=petId" })
+    @SpeakeasyMetadata()
     @Expose({ name: "petId" })
     petId?: number;
 
-    @SpeakeasyMetadata({ data: "form, name=quantity" })
+    @SpeakeasyMetadata()
     @Expose({ name: "quantity" })
     quantity?: number;
 
-    @SpeakeasyMetadata({ data: "form, name=shipDate" })
+    @SpeakeasyMetadata()
     @Expose({ name: "shipDate" })
     @Transform(({ value }) => new Date(value), { toClassOnly: true })
     shipDate?: Date;
@@ -39,7 +39,234 @@ export class Order extends SpeakeasyBase {
     /**
      * Order Status
      */
-    @SpeakeasyMetadata({ data: "form, name=status" })
+    @SpeakeasyMetadata()
     @Expose({ name: "status" })
+    status?: OrderSchemasCompleteStatus;
+}
+
+/**
+ * Order Status
+ */
+export enum OrderStatus {
+    Placed = "placed",
+    Approved = "approved",
+    Delivered = "delivered",
+}
+
+export class OrderId extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "complete" })
+    complete?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "petId" })
+    petId?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "quantity" })
+    quantity?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "shipDate" })
+    @Transform(({ value }) => new Date(value), { toClassOnly: true })
+    shipDate?: Date;
+
+    /**
+     * Order Status
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "status" })
+    status?: OrderStatus;
+}
+
+/**
+ * Order Status
+ */
+export enum OrderSchemasStatus {
+    Placed = "placed",
+    Approved = "approved",
+    Delivered = "delivered",
+}
+
+export class PetId extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "complete" })
+    complete?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "petId" })
+    petId?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "quantity" })
+    quantity?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "shipDate" })
+    @Transform(({ value }) => new Date(value), { toClassOnly: true })
+    shipDate?: Date;
+
+    /**
+     * Order Status
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "status" })
+    status?: OrderSchemasStatus;
+}
+
+/**
+ * Order Status
+ */
+export enum OrderSchemasQuantityStatus {
+    Placed = "placed",
+    Approved = "approved",
+    Delivered = "delivered",
+}
+
+export class Quantity extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "complete" })
+    complete?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "petId" })
+    petId?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "quantity" })
+    quantity?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "shipDate" })
+    @Transform(({ value }) => new Date(value), { toClassOnly: true })
+    shipDate?: Date;
+
+    /**
+     * Order Status
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "status" })
+    status?: OrderSchemasQuantityStatus;
+}
+
+/**
+ * Order Status
+ */
+export enum OrderSchemasShipDateStatus {
+    Placed = "placed",
+    Approved = "approved",
+    Delivered = "delivered",
+}
+
+export class ShipDate extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "complete" })
+    complete?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "petId" })
+    petId?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "quantity" })
+    quantity?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "shipDate" })
+    @Transform(({ value }) => new Date(value), { toClassOnly: true })
+    shipDate?: Date;
+
+    /**
+     * Order Status
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "status" })
+    status?: OrderSchemasShipDateStatus;
+}
+
+/**
+ * Order Status
+ */
+export enum OrderSchemasStatusStatus {
+    Placed = "placed",
+    Approved = "approved",
+    Delivered = "delivered",
+}
+
+export class Status extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "complete" })
+    complete?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "petId" })
+    petId?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "quantity" })
+    quantity?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "shipDate" })
+    @Transform(({ value }) => new Date(value), { toClassOnly: true })
+    shipDate?: Date;
+
+    /**
+     * Order Status
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "status" })
+    status?: OrderSchemasStatusStatus;
+}
+
+export class Order extends SpeakeasyBase {
+    @SpeakeasyMetadata({ data: "form, name=complete;json=true" })
+    @Expose({ name: "complete" })
+    @Type(() => Complete)
+    complete?: Complete;
+
+    @SpeakeasyMetadata({ data: "form, name=id;json=true" })
+    @Expose({ name: "id" })
+    @Type(() => OrderId)
+    id?: OrderId;
+
+    @SpeakeasyMetadata({ data: "form, name=petId;json=true" })
+    @Expose({ name: "petId" })
+    @Type(() => PetId)
+    petId?: PetId;
+
+    @SpeakeasyMetadata({ data: "form, name=quantity;json=true" })
+    @Expose({ name: "quantity" })
+    @Type(() => Quantity)
+    quantity?: Quantity;
+
+    @SpeakeasyMetadata({ data: "form, name=shipDate;json=true" })
+    @Expose({ name: "shipDate" })
+    @Type(() => ShipDate)
+    shipDate?: ShipDate;
+
+    @SpeakeasyMetadata({ data: "form, name=status;json=true" })
+    @Expose({ name: "status" })
+    @Type(() => Status)
     status?: Status;
 }

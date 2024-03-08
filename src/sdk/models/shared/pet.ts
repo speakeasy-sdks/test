@@ -10,39 +10,271 @@ import { Expose, Type } from "class-transformer";
 /**
  * pet status in the store
  */
-export enum PetStatus {
+export enum PetSchemasCategoryStatus {
     Available = "available",
     Pending = "pending",
     Sold = "sold",
 }
 
-export class Pet extends SpeakeasyBase {
-    @SpeakeasyMetadata({ data: "form, name=category;json=true" })
+export class PetCategory extends SpeakeasyBase {
+    @SpeakeasyMetadata()
     @Expose({ name: "category" })
     @Type(() => Category)
     category?: Category;
 
-    @SpeakeasyMetadata({ data: "form, name=id" })
+    @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
 
-    @SpeakeasyMetadata({ data: "form, name=name" })
+    @SpeakeasyMetadata()
     @Expose({ name: "name" })
     name: string;
 
-    @SpeakeasyMetadata({ data: "form, name=photoUrls" })
+    @SpeakeasyMetadata()
     @Expose({ name: "photoUrls" })
     photoUrls: string[];
 
     /**
      * pet status in the store
      */
-    @SpeakeasyMetadata({ data: "form, name=status" })
+    @SpeakeasyMetadata()
     @Expose({ name: "status" })
-    status?: PetStatus;
+    status?: PetSchemasCategoryStatus;
 
-    @SpeakeasyMetadata({ data: "form, name=tags;json=true", elemType: Tag })
+    @SpeakeasyMetadata({ elemType: Tag })
     @Expose({ name: "tags" })
     @Type(() => Tag)
     tags?: Tag[];
+}
+
+/**
+ * pet status in the store
+ */
+export enum PetSchemasStatus {
+    Available = "available",
+    Pending = "pending",
+    Sold = "sold",
+}
+
+export class PetSchemasId extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "category" })
+    @Type(() => Category)
+    category?: Category;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "photoUrls" })
+    photoUrls: string[];
+
+    /**
+     * pet status in the store
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "status" })
+    status?: PetSchemasStatus;
+
+    @SpeakeasyMetadata({ elemType: Tag })
+    @Expose({ name: "tags" })
+    @Type(() => Tag)
+    tags?: Tag[];
+}
+
+/**
+ * pet status in the store
+ */
+export enum PetSchemasNameStatus {
+    Available = "available",
+    Pending = "pending",
+    Sold = "sold",
+}
+
+export class PetName extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "category" })
+    @Type(() => Category)
+    category?: Category;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "photoUrls" })
+    photoUrls: string[];
+
+    /**
+     * pet status in the store
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "status" })
+    status?: PetSchemasNameStatus;
+
+    @SpeakeasyMetadata({ elemType: Tag })
+    @Expose({ name: "tags" })
+    @Type(() => Tag)
+    tags?: Tag[];
+}
+
+/**
+ * pet status in the store
+ */
+export enum PetSchemasPhotoUrlsStatus {
+    Available = "available",
+    Pending = "pending",
+    Sold = "sold",
+}
+
+export class PhotoUrls extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "category" })
+    @Type(() => Category)
+    category?: Category;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "photoUrls" })
+    photoUrls: string[];
+
+    /**
+     * pet status in the store
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "status" })
+    status?: PetSchemasPhotoUrlsStatus;
+
+    @SpeakeasyMetadata({ elemType: Tag })
+    @Expose({ name: "tags" })
+    @Type(() => Tag)
+    tags?: Tag[];
+}
+
+/**
+ * pet status in the store
+ */
+export enum PetSchemasStatusStatus {
+    Available = "available",
+    Pending = "pending",
+    Sold = "sold",
+}
+
+export class PetStatus extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "category" })
+    @Type(() => Category)
+    category?: Category;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "photoUrls" })
+    photoUrls: string[];
+
+    /**
+     * pet status in the store
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "status" })
+    status?: PetSchemasStatusStatus;
+
+    @SpeakeasyMetadata({ elemType: Tag })
+    @Expose({ name: "tags" })
+    @Type(() => Tag)
+    tags?: Tag[];
+}
+
+/**
+ * pet status in the store
+ */
+export enum PetSchemasTagsStatus {
+    Available = "available",
+    Pending = "pending",
+    Sold = "sold",
+}
+
+export class Tags extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "category" })
+    @Type(() => Category)
+    category?: Category;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "photoUrls" })
+    photoUrls: string[];
+
+    /**
+     * pet status in the store
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "status" })
+    status?: PetSchemasTagsStatus;
+
+    @SpeakeasyMetadata({ elemType: Tag })
+    @Expose({ name: "tags" })
+    @Type(() => Tag)
+    tags?: Tag[];
+}
+
+export class Pet extends SpeakeasyBase {
+    @SpeakeasyMetadata({ data: "form, name=category;json=true" })
+    @Expose({ name: "category" })
+    @Type(() => PetCategory)
+    category?: PetCategory;
+
+    @SpeakeasyMetadata({ data: "form, name=id;json=true" })
+    @Expose({ name: "id" })
+    @Type(() => PetSchemasId)
+    id?: PetSchemasId;
+
+    @SpeakeasyMetadata({ data: "form, name=name;json=true" })
+    @Expose({ name: "name" })
+    @Type(() => PetName)
+    name: PetName;
+
+    @SpeakeasyMetadata({ data: "form, name=photoUrls;json=true" })
+    @Expose({ name: "photoUrls" })
+    @Type(() => PhotoUrls)
+    photoUrls: PhotoUrls;
+
+    @SpeakeasyMetadata({ data: "form, name=status;json=true" })
+    @Expose({ name: "status" })
+    @Type(() => PetStatus)
+    status?: PetStatus;
+
+    @SpeakeasyMetadata({ data: "form, name=tags;json=true" })
+    @Expose({ name: "tags" })
+    @Type(() => Tags)
+    tags?: Tags;
 }

@@ -13,7 +13,7 @@ export class UpdateUserRawRequest extends SpeakeasyBase {
     requestBody?: Uint8Array;
 
     /**
-     * name that need to be deleted
+     * name that needs to be updated
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" })
     username: string;

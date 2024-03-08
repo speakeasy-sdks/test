@@ -3,41 +3,342 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { Expose } from "class-transformer";
+import { Expose, Type } from "class-transformer";
 
-export class User extends SpeakeasyBase {
-    @SpeakeasyMetadata({ data: "form, name=email" })
+export class Email extends SpeakeasyBase {
+    @SpeakeasyMetadata()
     @Expose({ name: "email" })
     email?: string;
 
-    @SpeakeasyMetadata({ data: "form, name=firstName" })
+    @SpeakeasyMetadata()
     @Expose({ name: "firstName" })
     firstName?: string;
 
-    @SpeakeasyMetadata({ data: "form, name=id" })
+    @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
 
-    @SpeakeasyMetadata({ data: "form, name=lastName" })
+    @SpeakeasyMetadata()
     @Expose({ name: "lastName" })
     lastName?: string;
 
-    @SpeakeasyMetadata({ data: "form, name=password" })
+    @SpeakeasyMetadata()
     @Expose({ name: "password" })
     password?: string;
 
-    @SpeakeasyMetadata({ data: "form, name=phone" })
+    @SpeakeasyMetadata()
     @Expose({ name: "phone" })
     phone?: string;
 
     /**
      * User Status
      */
-    @SpeakeasyMetadata({ data: "form, name=userStatus" })
+    @SpeakeasyMetadata()
     @Expose({ name: "userStatus" })
     userStatus?: number;
 
-    @SpeakeasyMetadata({ data: "form, name=username" })
+    @SpeakeasyMetadata()
     @Expose({ name: "username" })
     username?: string;
+}
+
+export class FirstName extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "email" })
+    email?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "firstName" })
+    firstName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lastName" })
+    lastName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "password" })
+    password?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "phone" })
+    phone?: string;
+
+    /**
+     * User Status
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "userStatus" })
+    userStatus?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
+
+export class UserId extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "email" })
+    email?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "firstName" })
+    firstName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lastName" })
+    lastName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "password" })
+    password?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "phone" })
+    phone?: string;
+
+    /**
+     * User Status
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "userStatus" })
+    userStatus?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
+
+export class LastName extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "email" })
+    email?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "firstName" })
+    firstName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lastName" })
+    lastName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "password" })
+    password?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "phone" })
+    phone?: string;
+
+    /**
+     * User Status
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "userStatus" })
+    userStatus?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
+
+export class Password extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "email" })
+    email?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "firstName" })
+    firstName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lastName" })
+    lastName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "password" })
+    password?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "phone" })
+    phone?: string;
+
+    /**
+     * User Status
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "userStatus" })
+    userStatus?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
+
+export class Phone extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "email" })
+    email?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "firstName" })
+    firstName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lastName" })
+    lastName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "password" })
+    password?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "phone" })
+    phone?: string;
+
+    /**
+     * User Status
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "userStatus" })
+    userStatus?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
+
+export class UserStatus extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "email" })
+    email?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "firstName" })
+    firstName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lastName" })
+    lastName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "password" })
+    password?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "phone" })
+    phone?: string;
+
+    /**
+     * User Status
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "userStatus" })
+    userStatus?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
+
+export class Username extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "email" })
+    email?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "firstName" })
+    firstName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lastName" })
+    lastName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "password" })
+    password?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "phone" })
+    phone?: string;
+
+    /**
+     * User Status
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "userStatus" })
+    userStatus?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
+
+export class User extends SpeakeasyBase {
+    @SpeakeasyMetadata({ data: "form, name=email;json=true" })
+    @Expose({ name: "email" })
+    @Type(() => Email)
+    email?: Email;
+
+    @SpeakeasyMetadata({ data: "form, name=firstName;json=true" })
+    @Expose({ name: "firstName" })
+    @Type(() => FirstName)
+    firstName?: FirstName;
+
+    @SpeakeasyMetadata({ data: "form, name=id;json=true" })
+    @Expose({ name: "id" })
+    @Type(() => UserId)
+    id?: UserId;
+
+    @SpeakeasyMetadata({ data: "form, name=lastName;json=true" })
+    @Expose({ name: "lastName" })
+    @Type(() => LastName)
+    lastName?: LastName;
+
+    @SpeakeasyMetadata({ data: "form, name=password;json=true" })
+    @Expose({ name: "password" })
+    @Type(() => Password)
+    password?: Password;
+
+    @SpeakeasyMetadata({ data: "form, name=phone;json=true" })
+    @Expose({ name: "phone" })
+    @Type(() => Phone)
+    phone?: Phone;
+
+    @SpeakeasyMetadata({ data: "form, name=userStatus;json=true" })
+    @Expose({ name: "userStatus" })
+    @Type(() => UserStatus)
+    userStatus?: UserStatus;
+
+    @SpeakeasyMetadata({ data: "form, name=username;json=true" })
+    @Expose({ name: "username" })
+    @Type(() => Username)
+    username?: Username;
 }
