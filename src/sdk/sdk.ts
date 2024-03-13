@@ -51,9 +51,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.18";
-    sdkVersion = "2.1.4";
-    genVersion = "2.279.1";
-    userAgent = "speakeasy-sdk/typescript 2.1.4 2.279.1 1.0.18 Test";
+    sdkVersion = "2.1.5";
+    genVersion = "2.280.6";
+    userAgent = "speakeasy-sdk/typescript 2.1.5 2.280.6 1.0.18 Test";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -96,9 +96,12 @@ export class Test {
 
     constructor(props?: SDKProps) {
         let serverURL = props?.serverURL;
-        const serverIdx = props?.serverIdx ?? 0;
 
         if (!serverURL) {
+            const serverIdx = props?.serverIdx ?? 0;
+            if (serverIdx < 0 || serverIdx >= ServerList.length) {
+                throw new Error(`Invalid server index ${serverIdx}`);
+            }
             serverURL = ServerList[serverIdx];
         }
 
