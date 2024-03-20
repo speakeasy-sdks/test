@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 7a325036-3775-49d3-8a36-a3bc17a3eb01
 management:
-  docChecksum: fcb45d84c941386715ad3a606e6dcab0
-  docVersion: 1.0.18
-  speakeasyVersion: 1.207.1
-  generationVersion: 2.280.6
-  releaseVersion: 2.1.5
-  configChecksum: 3da8bf04301cb68a8cdded4b3fa086b9
+  docChecksum: 4cf9c744165eddd5e38e3c149389a9ef
+  docVersion: 1.0.19
+  speakeasyVersion: 1.213.0
+  generationVersion: 2.283.1
+  releaseVersion: 2.1.6
+  configChecksum: 34c218306c8ed1832e35182613c1a52f
   repoURL: https://github.com/speakeasy-sdks/test.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/test
@@ -14,7 +14,7 @@ features:
   typescript:
     acceptHeaders: 2.81.1
     core: 3.4.8
-    globalSecurity: 2.82.4
+    globalSecurity: 2.82.5
     globalServerURLs: 2.82.2
     methodSecurity: 2.82.0
 generatedFiles:
@@ -126,50 +126,13 @@ generatedFiles:
   - docs/sdk/models/operations/updateuserjsonresponse.md
   - docs/sdk/models/operations/updateuserrawrequest.md
   - docs/sdk/models/operations/updateuserrawresponse.md
-  - docs/sdk/models/shared/petschemascategorystatus.md
-  - docs/sdk/models/shared/petcategory.md
-  - docs/sdk/models/shared/petschemasstatus.md
-  - docs/sdk/models/shared/petschemasid.md
-  - docs/sdk/models/shared/petschemasnamestatus.md
-  - docs/sdk/models/shared/petname.md
-  - docs/sdk/models/shared/petschemasphotourlsstatus.md
-  - docs/sdk/models/shared/photourls.md
-  - docs/sdk/models/shared/petschemasstatusstatus.md
   - docs/sdk/models/shared/petstatus.md
-  - docs/sdk/models/shared/petschemastagsstatus.md
-  - docs/sdk/models/shared/tags.md
   - docs/sdk/models/shared/pet.md
-  - docs/sdk/models/shared/tagid.md
-  - docs/sdk/models/shared/tagname.md
   - docs/sdk/models/shared/tag.md
-  - docs/sdk/models/shared/id.md
-  - docs/sdk/models/shared/name.md
   - docs/sdk/models/shared/category.md
-  - docs/sdk/models/shared/code.md
-  - docs/sdk/models/shared/message.md
-  - docs/sdk/models/shared/typet.md
   - docs/sdk/models/shared/apiresponse.md
-  - docs/sdk/models/shared/orderschemascompletestatus.md
-  - docs/sdk/models/shared/complete.md
-  - docs/sdk/models/shared/orderstatus.md
-  - docs/sdk/models/shared/orderid.md
-  - docs/sdk/models/shared/orderschemasstatus.md
-  - docs/sdk/models/shared/petid.md
-  - docs/sdk/models/shared/orderschemasquantitystatus.md
-  - docs/sdk/models/shared/quantity.md
-  - docs/sdk/models/shared/orderschemasshipdatestatus.md
-  - docs/sdk/models/shared/shipdate.md
-  - docs/sdk/models/shared/orderschemasstatusstatus.md
   - docs/sdk/models/shared/status.md
   - docs/sdk/models/shared/order.md
-  - docs/sdk/models/shared/email.md
-  - docs/sdk/models/shared/firstname.md
-  - docs/sdk/models/shared/userid.md
-  - docs/sdk/models/shared/lastname.md
-  - docs/sdk/models/shared/password.md
-  - docs/sdk/models/shared/phone.md
-  - docs/sdk/models/shared/userstatus.md
-  - docs/sdk/models/shared/username.md
   - docs/sdk/models/shared/user.md
   - docs/sdk/models/shared/security.md
   - docs/sdks/test/README.md

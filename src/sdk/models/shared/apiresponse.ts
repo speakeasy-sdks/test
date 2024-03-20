@@ -3,63 +3,18 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { Expose, Type } from "class-transformer";
-
-export class Code extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "code" })
-    code?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "message" })
-    message?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "type" })
-    type?: string;
-}
-
-export class Message extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "code" })
-    code?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "message" })
-    message?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "type" })
-    type?: string;
-}
-
-export class TypeT extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "code" })
-    code?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "message" })
-    message?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "type" })
-    type?: string;
-}
+import { Expose } from "class-transformer";
 
 export class ApiResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "code" })
-    @Type(() => Code)
-    code?: Code;
+    code?: number;
 
     @SpeakeasyMetadata()
     @Expose({ name: "message" })
-    @Type(() => Message)
-    message?: Message;
+    message?: string;
 
     @SpeakeasyMetadata()
     @Expose({ name: "type" })
-    @Type(() => TypeT)
-    type?: TypeT;
+    type?: string;
 }

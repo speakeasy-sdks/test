@@ -1,14 +1,7 @@
 <!-- Start SDK Example Usage [usage] -->
 ```typescript
 import { Test } from "Test";
-import {
-    PetSchemasCategoryStatus,
-    PetSchemasNameStatus,
-    PetSchemasPhotoUrlsStatus,
-    PetSchemasStatus,
-    PetSchemasStatusStatus,
-    PetSchemasTagsStatus,
-} from "Test/dist/sdk/models/shared";
+import { PetStatus } from "Test/dist/sdk/models/shared";
 
 async function run() {
     const sdk = new Test({
@@ -19,131 +12,13 @@ async function run() {
 
     const res = await sdk.pet.addPetForm({
         category: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
+            id: 1,
+            name: "Dogs",
         },
-        id: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
-        name: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
-        photoUrls: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
-        status: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
-        tags: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
+        id: 10,
+        name: "doggie",
+        photoUrls: ["<value>"],
+        tags: [{}],
     });
 
     if (res.statusCode == 200) {

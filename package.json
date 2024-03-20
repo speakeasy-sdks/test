@@ -1,6 +1,6 @@
 {
   "name": "Test",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "author": "Dom",
   "scripts": {
     "prepare": "tsc --build",

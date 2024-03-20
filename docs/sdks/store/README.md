@@ -157,14 +157,7 @@ Place a new order in the store
 
 ```typescript
 import { Test } from "Test";
-import {
-  OrderSchemasCompleteStatus,
-  OrderSchemasQuantityStatus,
-  OrderSchemasShipDateStatus,
-  OrderSchemasStatus,
-  OrderSchemasStatusStatus,
-  OrderStatus,
-} from "Test/dist/sdk/models/shared";
+import { Status } from "Test/dist/sdk/models/shared";
 
 async function run() {
   const sdk = new Test({
@@ -174,42 +167,10 @@ async function run() {
   });
 
   const res = await sdk.store.placeOrderForm({
-    complete: {
-      id: 10,
-      petId: 198772,
-      quantity: 7,
-      status: OrderSchemasCompleteStatus.Approved,
-    },
-    id: {
-      id: 10,
-      petId: 198772,
-      quantity: 7,
-      status: OrderStatus.Approved,
-    },
-    petId: {
-      id: 10,
-      petId: 198772,
-      quantity: 7,
-      status: OrderSchemasStatus.Approved,
-    },
-    quantity: {
-      id: 10,
-      petId: 198772,
-      quantity: 7,
-      status: OrderSchemasQuantityStatus.Approved,
-    },
-    shipDate: {
-      id: 10,
-      petId: 198772,
-      quantity: 7,
-      status: OrderSchemasShipDateStatus.Approved,
-    },
-    status: {
-      id: 10,
-      petId: 198772,
-      quantity: 7,
-      status: OrderSchemasStatusStatus.Approved,
-    },
+    id: 10,
+    petId: 198772,
+    quantity: 7,
+    status: Status.Approved,
   });
 
   if (res.statusCode == 200) {
@@ -245,14 +206,7 @@ Place a new order in the store
 
 ```typescript
 import { Test } from "Test";
-import {
-  OrderSchemasCompleteStatus,
-  OrderSchemasQuantityStatus,
-  OrderSchemasShipDateStatus,
-  OrderSchemasStatus,
-  OrderSchemasStatusStatus,
-  OrderStatus,
-} from "Test/dist/sdk/models/shared";
+import { Status } from "Test/dist/sdk/models/shared";
 
 async function run() {
   const sdk = new Test({
@@ -262,42 +216,10 @@ async function run() {
   });
 
   const res = await sdk.store.placeOrderJson({
-    complete: {
-      id: 10,
-      petId: 198772,
-      quantity: 7,
-      status: OrderSchemasCompleteStatus.Approved,
-    },
-    id: {
-      id: 10,
-      petId: 198772,
-      quantity: 7,
-      status: OrderStatus.Approved,
-    },
-    petId: {
-      id: 10,
-      petId: 198772,
-      quantity: 7,
-      status: OrderSchemasStatus.Approved,
-    },
-    quantity: {
-      id: 10,
-      petId: 198772,
-      quantity: 7,
-      status: OrderSchemasQuantityStatus.Approved,
-    },
-    shipDate: {
-      id: 10,
-      petId: 198772,
-      quantity: 7,
-      status: OrderSchemasShipDateStatus.Approved,
-    },
-    status: {
-      id: 10,
-      petId: 198772,
-      quantity: 7,
-      status: OrderSchemasStatusStatus.Approved,
-    },
+    id: 10,
+    petId: 198772,
+    quantity: 7,
+    status: Status.Approved,
   });
 
   if (res.statusCode == 200) {
@@ -333,14 +255,7 @@ Place a new order in the store
 
 ```typescript
 import { Test } from "Test";
-import {
-  OrderSchemasCompleteStatus,
-  OrderSchemasQuantityStatus,
-  OrderSchemasShipDateStatus,
-  OrderSchemasStatus,
-  OrderSchemasStatusStatus,
-  OrderStatus,
-} from "Test/dist/sdk/models/shared";
+import { Status } from "Test/dist/sdk/models/shared";
 
 async function run() {
   const sdk = new Test({

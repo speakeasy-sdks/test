@@ -23,14 +23,7 @@ yarn add https://github.com/speakeasy-sdks/test
 
 ```typescript
 import { Test } from "Test";
-import {
-    PetSchemasCategoryStatus,
-    PetSchemasNameStatus,
-    PetSchemasPhotoUrlsStatus,
-    PetSchemasStatus,
-    PetSchemasStatusStatus,
-    PetSchemasTagsStatus,
-} from "Test/dist/sdk/models/shared";
+import { PetStatus } from "Test/dist/sdk/models/shared";
 
 async function run() {
     const sdk = new Test({
@@ -41,131 +34,13 @@ async function run() {
 
     const res = await sdk.pet.addPetForm({
         category: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
+            id: 1,
+            name: "Dogs",
         },
-        id: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
-        name: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
-        photoUrls: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
-        status: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
-        tags: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
+        id: 10,
+        name: "doggie",
+        photoUrls: ["<value>"],
+        tags: [{}],
     });
 
     if (res.statusCode == 200) {
@@ -239,14 +114,7 @@ Example
 
 ```typescript
 import { Test } from "Test";
-import {
-    PetSchemasCategoryStatus,
-    PetSchemasNameStatus,
-    PetSchemasPhotoUrlsStatus,
-    PetSchemasStatus,
-    PetSchemasStatusStatus,
-    PetSchemasTagsStatus,
-} from "Test/dist/sdk/models/shared";
+import { PetStatus } from "Test/dist/sdk/models/shared";
 
 async function run() {
     const sdk = new Test({
@@ -259,131 +127,13 @@ async function run() {
     try {
         res = await sdk.pet.addPetForm({
             category: {
-                category: {
-                    id: {
-                        id: 1,
-                        name: "Dogs",
-                    },
-                    name: {
-                        id: 1,
-                        name: "Dogs",
-                    },
-                },
-                id: 10,
-                name: "doggie",
-                photoUrls: ["<value>"],
-                tags: [
-                    {
-                        id: {},
-                        name: {},
-                    },
-                ],
+                id: 1,
+                name: "Dogs",
             },
-            id: {
-                category: {
-                    id: {
-                        id: 1,
-                        name: "Dogs",
-                    },
-                    name: {
-                        id: 1,
-                        name: "Dogs",
-                    },
-                },
-                id: 10,
-                name: "doggie",
-                photoUrls: ["<value>"],
-                tags: [
-                    {
-                        id: {},
-                        name: {},
-                    },
-                ],
-            },
-            name: {
-                category: {
-                    id: {
-                        id: 1,
-                        name: "Dogs",
-                    },
-                    name: {
-                        id: 1,
-                        name: "Dogs",
-                    },
-                },
-                id: 10,
-                name: "doggie",
-                photoUrls: ["<value>"],
-                tags: [
-                    {
-                        id: {},
-                        name: {},
-                    },
-                ],
-            },
-            photoUrls: {
-                category: {
-                    id: {
-                        id: 1,
-                        name: "Dogs",
-                    },
-                    name: {
-                        id: 1,
-                        name: "Dogs",
-                    },
-                },
-                id: 10,
-                name: "doggie",
-                photoUrls: ["<value>"],
-                tags: [
-                    {
-                        id: {},
-                        name: {},
-                    },
-                ],
-            },
-            status: {
-                category: {
-                    id: {
-                        id: 1,
-                        name: "Dogs",
-                    },
-                    name: {
-                        id: 1,
-                        name: "Dogs",
-                    },
-                },
-                id: 10,
-                name: "doggie",
-                photoUrls: ["<value>"],
-                tags: [
-                    {
-                        id: {},
-                        name: {},
-                    },
-                ],
-            },
-            tags: {
-                category: {
-                    id: {
-                        id: 1,
-                        name: "Dogs",
-                    },
-                    name: {
-                        id: 1,
-                        name: "Dogs",
-                    },
-                },
-                id: 10,
-                name: "doggie",
-                photoUrls: ["<value>"],
-                tags: [
-                    {
-                        id: {},
-                        name: {},
-                    },
-                ],
-            },
+            id: 10,
+            name: "doggie",
+            photoUrls: ["<value>"],
+            tags: [{}],
         });
     } catch (err) {
         if (err instanceof errors.SDKError) {
@@ -419,14 +169,7 @@ You can override the default server globally by passing a server index to the `s
 
 ```typescript
 import { Test } from "Test";
-import {
-    PetSchemasCategoryStatus,
-    PetSchemasNameStatus,
-    PetSchemasPhotoUrlsStatus,
-    PetSchemasStatus,
-    PetSchemasStatusStatus,
-    PetSchemasTagsStatus,
-} from "Test/dist/sdk/models/shared";
+import { PetStatus } from "Test/dist/sdk/models/shared";
 
 async function run() {
     const sdk = new Test({
@@ -438,131 +181,13 @@ async function run() {
 
     const res = await sdk.pet.addPetForm({
         category: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
+            id: 1,
+            name: "Dogs",
         },
-        id: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
-        name: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
-        photoUrls: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
-        status: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
-        tags: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
+        id: 10,
+        name: "doggie",
+        photoUrls: ["<value>"],
+        tags: [{}],
     });
 
     if (res.statusCode == 200) {
@@ -580,14 +205,7 @@ run();
 The default server can also be overridden globally by passing a URL to the `serverURL: str` optional parameter when initializing the SDK client instance. For example:
 ```typescript
 import { Test } from "Test";
-import {
-    PetSchemasCategoryStatus,
-    PetSchemasNameStatus,
-    PetSchemasPhotoUrlsStatus,
-    PetSchemasStatus,
-    PetSchemasStatusStatus,
-    PetSchemasTagsStatus,
-} from "Test/dist/sdk/models/shared";
+import { PetStatus } from "Test/dist/sdk/models/shared";
 
 async function run() {
     const sdk = new Test({
@@ -599,131 +217,13 @@ async function run() {
 
     const res = await sdk.pet.addPetForm({
         category: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
+            id: 1,
+            name: "Dogs",
         },
-        id: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
-        name: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
-        photoUrls: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
-        status: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
-        tags: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
+        id: 10,
+        name: "doggie",
+        photoUrls: ["<value>"],
+        tags: [{}],
     });
 
     if (res.statusCode == 200) {
@@ -773,14 +273,7 @@ This SDK supports the following security scheme globally:
 You can set the security parameters through the `security` optional parameter when initializing the SDK client instance. For example:
 ```typescript
 import { Test } from "Test";
-import {
-    PetSchemasCategoryStatus,
-    PetSchemasNameStatus,
-    PetSchemasPhotoUrlsStatus,
-    PetSchemasStatus,
-    PetSchemasStatusStatus,
-    PetSchemasTagsStatus,
-} from "Test/dist/sdk/models/shared";
+import { PetStatus } from "Test/dist/sdk/models/shared";
 
 async function run() {
     const sdk = new Test({
@@ -791,131 +284,13 @@ async function run() {
 
     const res = await sdk.pet.addPetForm({
         category: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
+            id: 1,
+            name: "Dogs",
         },
-        id: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
-        name: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
-        photoUrls: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
-        status: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
-        tags: {
-            category: {
-                id: {
-                    id: 1,
-                    name: "Dogs",
-                },
-                name: {
-                    id: 1,
-                    name: "Dogs",
-                },
-            },
-            id: 10,
-            name: "doggie",
-            photoUrls: ["<value>"],
-            tags: [
-                {
-                    id: {},
-                    name: {},
-                },
-            ],
-        },
+        id: 10,
+        name: "doggie",
+        photoUrls: ["<value>"],
+        tags: [{}],
     });
 
     if (res.statusCode == 200) {
