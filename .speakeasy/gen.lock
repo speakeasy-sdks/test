@@ -3,17 +3,17 @@ id: 7a325036-3775-49d3-8a36-a3bc17a3eb01
 management:
   docChecksum: 4cf9c744165eddd5e38e3c149389a9ef
   docVersion: 1.0.19
-  speakeasyVersion: 1.213.0
-  generationVersion: 2.283.1
-  releaseVersion: 2.1.6
-  configChecksum: 34c218306c8ed1832e35182613c1a52f
+  speakeasyVersion: 1.286.0
+  generationVersion: 2.326.3
+  releaseVersion: 2.1.7
+  configChecksum: 35277e2eb4662d0942f6c7f5fe00fb8c
   repoURL: https://github.com/speakeasy-sdks/test.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/test
 features:
   typescript:
     acceptHeaders: 2.81.1
-    core: 3.4.8
+    core: 3.4.9
     globalSecurity: 2.82.5
     globalServerURLs: 2.82.2
     methodSecurity: 2.82.0

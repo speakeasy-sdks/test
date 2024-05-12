@@ -80,7 +80,9 @@ export class Store {
             rawResponse: httpRes,
         });
         switch (true) {
-            case [400, 404].includes(httpRes?.status):
+            case (httpRes?.status >= 200 && httpRes?.status < 300) ||
+                httpRes?.status == 400 ||
+                httpRes?.status == 404:
                 break;
         }
 

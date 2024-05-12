@@ -124,6 +124,8 @@ export class User {
         });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
+            case httpRes?.status >= 200 && httpRes?.status < 300:
+                break;
             default:
                 if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.user = utils.objectToClass(JSON.parse(decodedRes), shared.User);
@@ -218,6 +220,8 @@ export class User {
         });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
+            case httpRes?.status >= 200 && httpRes?.status < 300:
+                break;
             default:
                 if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.user = utils.objectToClass(JSON.parse(decodedRes), shared.User);
@@ -308,6 +312,8 @@ export class User {
         });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
+            case httpRes?.status >= 200 && httpRes?.status < 300:
+                break;
             default:
                 if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.user = utils.objectToClass(JSON.parse(decodedRes), shared.User);
@@ -474,7 +480,9 @@ export class User {
             rawResponse: httpRes,
         });
         switch (true) {
-            case [400, 404].includes(httpRes?.status):
+            case (httpRes?.status >= 200 && httpRes?.status < 300) ||
+                httpRes?.status == 400 ||
+                httpRes?.status == 404:
                 break;
         }
 

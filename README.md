@@ -28,7 +28,7 @@ import { PetStatus } from "Test/dist/sdk/models/shared";
 async function run() {
     const sdk = new Test({
         security: {
-            petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+            petstoreAuth: "<YOUR_PETSTORE_AUTH_HERE>",
         },
     });
 
@@ -119,7 +119,7 @@ import { PetStatus } from "Test/dist/sdk/models/shared";
 async function run() {
     const sdk = new Test({
         security: {
-            petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+            petstoreAuth: "<YOUR_PETSTORE_AUTH_HERE>",
         },
     });
 
@@ -175,7 +175,7 @@ async function run() {
     const sdk = new Test({
         serverIdx: 0,
         security: {
-            petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+            petstoreAuth: "<YOUR_PETSTORE_AUTH_HERE>",
         },
     });
 
@@ -211,7 +211,7 @@ async function run() {
     const sdk = new Test({
         serverURL: "https:///api/v3",
         security: {
-            petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+            petstoreAuth: "<YOUR_PETSTORE_AUTH_HERE>",
         },
     });
 
@@ -278,7 +278,7 @@ import { PetStatus } from "Test/dist/sdk/models/shared";
 async function run() {
     const sdk = new Test({
         security: {
-            petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+            petstoreAuth: "<YOUR_PETSTORE_AUTH_HERE>",
         },
     });
 

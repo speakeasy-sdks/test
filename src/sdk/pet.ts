@@ -408,7 +408,7 @@ export class Pet {
             rawResponse: httpRes,
         });
         switch (true) {
-            case httpRes?.status == 400:
+            case (httpRes?.status >= 200 && httpRes?.status < 300) || httpRes?.status == 400:
                 break;
         }
 
@@ -721,7 +721,7 @@ export class Pet {
             rawResponse: httpRes,
         });
         switch (true) {
-            case httpRes?.status == 405:
+            case (httpRes?.status >= 200 && httpRes?.status < 300) || httpRes?.status == 405:
                 break;
         }
 

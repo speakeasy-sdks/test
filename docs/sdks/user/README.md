@@ -31,7 +31,7 @@ import { Test } from "Test";
 async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+      petstoreAuth: "<YOUR_PETSTORE_AUTH_HERE>",
     },
   });
 
@@ -83,7 +83,7 @@ import { Test } from "Test";
 async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+      petstoreAuth: "<YOUR_PETSTORE_AUTH_HERE>",
     },
   });
 
@@ -135,7 +135,7 @@ import { Test } from "Test";
 async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+      petstoreAuth: "<YOUR_PETSTORE_AUTH_HERE>",
     },
   });
 
@@ -178,7 +178,7 @@ import { Test } from "Test";
 async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+      petstoreAuth: "<YOUR_PETSTORE_AUTH_HERE>",
     },
   });
 
@@ -232,7 +232,7 @@ import { Test } from "Test";
 async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+      petstoreAuth: "<YOUR_PETSTORE_AUTH_HERE>",
     },
   });
 
@@ -277,7 +277,7 @@ import { Test } from "Test";
 async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+      petstoreAuth: "<YOUR_PETSTORE_AUTH_HERE>",
     },
   });
 
@@ -322,7 +322,7 @@ import { Test } from "Test";
 async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+      petstoreAuth: "<YOUR_PETSTORE_AUTH_HERE>",
     },
   });
 
@@ -365,7 +365,7 @@ import { Test } from "Test";
 async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+      petstoreAuth: "<YOUR_PETSTORE_AUTH_HERE>",
     },
   });
 
@@ -407,7 +407,7 @@ import { Test } from "Test";
 async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+      petstoreAuth: "<YOUR_PETSTORE_AUTH_HERE>",
     },
   });
 
@@ -462,7 +462,7 @@ import { Test } from "Test";
 async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+      petstoreAuth: "<YOUR_PETSTORE_AUTH_HERE>",
     },
   });
 
@@ -517,7 +517,7 @@ import { Test } from "Test";
 async function run() {
   const sdk = new Test({
     security: {
-      petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
+      petstoreAuth: "<YOUR_PETSTORE_AUTH_HERE>",
     },
   });
 
